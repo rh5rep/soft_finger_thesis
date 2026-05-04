@@ -1,0 +1,2474 @@
+{
+  "config": {
+    "id": "36a3b0b5-bad0-4a04-b79b-441c7cef77db",
+    "label": "BetterBibTeX JSON",
+    "preferences": {
+      "ascii": "",
+      "asciiBibLaTeX": false,
+      "asciiBibTeX": true,
+      "autoAbbrev": false,
+      "autoExport": "immediate",
+      "autoExportDelay": 5,
+      "autoExportIdleWait": 10,
+      "autoExportPathReplaceDiacritics": false,
+      "autoExportPathReplaceDirSep": "-",
+      "autoExportPathReplaceSpace": " ",
+      "automaticTags": true,
+      "auxImport": false,
+      "baseAttachmentPath": "",
+      "biblatexExtendedDateFormat": true,
+      "biblatexExtendedNameFormat": true,
+      "biblatexExtractEprint": true,
+      "biblatexUsePrefix": true,
+      "bibtexEditionOrdinal": false,
+      "bibtexParticleNoOp": false,
+      "bibtexURL": "off",
+      "cache": true,
+      "cacheDelete": false,
+      "charmap": "",
+      "chinese": false,
+      "chineseSplitName": true,
+      "citeCommand": "cite",
+      "citekeyCaseInsensitive": true,
+      "citekeyFold": true,
+      "citekeyFormat": "auth.lower + shorttitle(3, 3) + year",
+      "citekeySearch": true,
+      "citekeyUnsafeChars": "\\\"#%'(),={}~",
+      "csquotes": "",
+      "DOIandURL": "both",
+      "exportBibTeXStrings": "off",
+      "exportBraceProtection": true,
+      "exportSort": "citekey",
+      "exportTitleCase": true,
+      "extraMergeCitekeys": false,
+      "extraMergeCSL": false,
+      "extraMergeTeX": false,
+      "fillKeyAfter": 1,
+      "git": "config",
+      "import": true,
+      "importBibTeXStrings": true,
+      "importCaseProtection": "as-needed",
+      "importCitationKey": true,
+      "importDetectURLs": true,
+      "importExtra": true,
+      "importJabRefAbbreviations": true,
+      "importJabRefStrings": true,
+      "importNoteToExtra": "",
+      "importPlaceEvent": "inproceedings,conference,presentation,talk",
+      "importSentenceCase": "on+guess",
+      "importSentenceCaseQuoted": true,
+      "importUnknownTexCommand": "ignore",
+      "itemObserverDelay": 5,
+      "jabrefFormat": 0,
+      "japanese": false,
+      "keyScope": "library",
+      "language": "langid",
+      "mapMath": "",
+      "mapText": "",
+      "packages": "",
+      "parseParticles": true,
+      "patchDates": "dateadded=dateAdded, date-added=dateAdded, datemodified=dateModified, date-modified=dateModified",
+      "postscript": "",
+      "postscriptOverride": "",
+      "preferencesOverride": "",
+      "qualityReport": false,
+      "quickCopyEta": "",
+      "quickCopyMode": "latex",
+      "quickCopyOrgMode": "zotero",
+      "quickCopyPandocBrackets": false,
+      "quickCopySelectLink": "zotero",
+      "rawImports": false,
+      "rawLaTag": "#LaTeX",
+      "relativeFilePaths": false,
+      "remigrate": false,
+      "resetKeyOnChange": false,
+      "separatorList": "and",
+      "separatorNames": "and",
+      "skipFields": "",
+      "skipWords": "a,ab,aboard,about,above,across,after,against,al,along,amid,among,an,and,anti,around,as,at,before,behind,below,beneath,beside,besides,between,beyond,but,by,d,da,das,de,del,dell,dello,dei,degli,della,dell,delle,dem,den,der,des,despite,die,do,down,du,during,ein,eine,einem,einen,einer,eines,el,en,et,except,for,from,gli,i,il,in,inside,into,is,l,la,las,le,les,like,lo,los,near,nor,of,off,on,onto,or,over,past,per,plus,round,save,since,so,some,sur,than,the,through,to,toward,towards,un,una,unas,under,underneath,une,unlike,uno,unos,until,up,upon,versus,via,von,while,with,within,without,yet,zu,zum",
+      "startupProgress": "popup",
+      "strings": "",
+      "stringsOverride": "",
+      "verbatimFields": "url,doi,file,pdf,ids,eprint,/^verb[a-z]$/,groups,/^citeulike-linkout-[0-9]+$/, /^bdsk-url-[0-9]+$/, keywords",
+      "warnBulkModify": 10,
+      "warnTitleCased": false
+    },
+    "options": {
+      "Items": true,
+      "Normalize": false,
+      "Preferences": true,
+      "biblatexAPA": false,
+      "biblatexChicago": false,
+      "exportFileData": false,
+      "exportNotes": true,
+      "keepUpdated": false,
+      "worker": true,
+      "exportDir": "/Users/rami/Documents/DTU/Thesis/soft_finger_thesis/refs",
+      "exportPath": "/Users/rami/Documents/DTU/Thesis/soft_finger_thesis/refs/zotero_export.json"
+    }
+  },
+  "version": {
+    "zotero": "8.0.5",
+    "bbt": "9.0.19"
+  },
+  "collections": {
+    "BVFZQWLZ": {
+      "key": "BVFZQWLZ",
+      "parent": "",
+      "name": "Existing Devices",
+      "collections": [],
+      "items": [
+        1,
+        2
+      ]
+    },
+    "5ELG73R9": {
+      "key": "5ELG73R9",
+      "parent": "",
+      "name": "Used Papers",
+      "collections": [],
+      "items": [
+        15,
+        45,
+        49,
+        51,
+        53,
+        58,
+        77,
+        80
+      ]
+    },
+    "2YSHRYL7": {
+      "key": "2YSHRYL7",
+      "parent": "",
+      "name": "Variable Stiffness Papers",
+      "collections": [],
+      "items": [
+        87,
+        91,
+        93,
+        96,
+        99
+      ]
+    }
+  },
+  "items": [
+    {
+      "key": "5FGBKFTT",
+      "version": 4,
+      "itemType": "note",
+      "note": "<div data-schema-version=\"9\"><p><a href=\"https://www.amazon.com/hand-robotic-rehabilitation-device/s?k=hand+robotic+rehabilitation+device\" rel=\"noopener noreferrer nofollow\">https://www.amazon.com/hand-robotic-rehabilitation-device/s?k=hand+robotic+rehabilitation+device</a></p>\n<p></p>\n</div>",
+      "tags": [],
+      "collections": [
+        "BVFZQWLZ"
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-18T16:46:25Z",
+      "dateModified": "2026-03-18T16:46:28Z",
+      "uri": "http://zotero.org/users/19851393/items/5FGBKFTT",
+      "itemID": 1,
+      "itemKey": "5FGBKFTT",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/5FGBKFTT"
+    },
+    {
+      "key": "RXAR7Q5U",
+      "version": 6,
+      "itemType": "note",
+      "note": "<div data-schema-version=\"9\"><p><a href=\"https://tyromotion.com/en/products/amadeo/\" rel=\"noopener noreferrer nofollow\">https://tyromotion.com/en/products/amadeo/</a></p>\n<p></p>\n<p>end effectors with magnets </p>\n<p>and emg model </p>\n</div>",
+      "tags": [],
+      "collections": [
+        "BVFZQWLZ"
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-18T16:47:18Z",
+      "dateModified": "2026-03-18T16:47:41Z",
+      "uri": "http://zotero.org/users/19851393/items/RXAR7Q5U",
+      "itemID": 2,
+      "itemKey": "RXAR7Q5U",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/RXAR7Q5U"
+    },
+    {
+      "key": "ZNUIHPV6",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "Computer Vision for Parkinson’s Disease Evaluation: A Survey on Finger Tapping",
+      "abstractNote": "Parkinson’s disease (PD) is a progressive neurodegenerative disorder whose prevalence has steadily been rising over the years. Specialist neurologists across the world assess and diagnose patients with PD, although the diagnostic process is time-consuming and various symptoms take years to appear, which means that the diagnosis is prone to human error. The partial automatization of PD assessment and diagnosis through computational processes has therefore been considered for some time. One well-known tool for PD assessment is finger tapping (FT), which can now be assessed through computer vision (CV). Artificial intelligence and related advances over recent decades, more specifically in the area of CV, have made it possible to develop computer systems that can help specialists assess and diagnose PD. The aim of this study is to review some advances related to CV techniques and FT so as to offer insight into future research lines that technological advances are now opening up.",
+      "date": "2024-02-08",
+      "DOI": "10.3390/healthcare12040439",
+      "citationKey": "amo-salasComputerVisionParkinsons2024",
+      "url": "https://www.mdpi.com/2227-9032/12/4/439",
+      "accessDate": "2026-03-23T22:13:21Z",
+      "shortTitle": "Computer Vision for Parkinson’s Disease Evaluation",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "12",
+      "pages": "439",
+      "publicationTitle": "Healthcare",
+      "ISSN": "2227-9032",
+      "issue": "4",
+      "journalAbbreviation": "Healthcare",
+      "creators": [
+        {
+          "firstName": "Javier",
+          "lastName": "Amo-Salas",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alicia",
+          "lastName": "Olivares-Gil",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Álvaro",
+          "lastName": "García-Bustillo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "García-García",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Álvar",
+          "lastName": "Arnaiz-González",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Esther",
+          "lastName": "Cubo",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-23T22:13:21Z",
+      "dateModified": "2026-03-23T22:13:21Z",
+      "uri": "http://zotero.org/users/19851393/items/ZNUIHPV6",
+      "itemID": 53,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://www.mdpi.com/2227-9032/12/4/439/pdf?version=1707480296",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-23T22:13:22Z",
+          "dateModified": "2026-03-23T22:13:22Z",
+          "uri": "http://zotero.org/users/19851393/items/C69MV2P3",
+          "path": "/Users/rami/Zotero/storage/C69MV2P3/Amo-Salas et al. - 2024 - Computer Vision for Parkinson’s Disease Evaluation A Survey on Finger Tapping.pdf",
+          "select": "zotero://select/library/items/C69MV2P3"
+        }
+      ],
+      "notes": [],
+      "itemKey": "ZNUIHPV6",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ZNUIHPV6"
+    },
+    {
+      "key": "JX3QZUF5",
+      "version": 525,
+      "itemType": "journalArticle",
+      "title": "A Soft Hand Exoskeleton With a Novel Tendon Layout to Improve Stable Wearing in Grasping Assistance",
+      "date": "4/2023",
+      "DOI": "10.1109/TOH.2023.3273908",
+      "citationKey": "bagneschiSoftHandExoskeleton2023",
+      "url": "https://ieeexplore.ieee.org/document/10122623/",
+      "accessDate": "2026-04-17T11:30:56Z",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "rights": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "volume": "16",
+      "pages": "311-321",
+      "publicationTitle": "IEEE Transactions on Haptics",
+      "ISSN": "1939-1412, 2329-4051, 2334-0134",
+      "issue": "2",
+      "journalAbbreviation": "IEEE Trans. Haptics",
+      "creators": [
+        {
+          "firstName": "Tommaso",
+          "lastName": "Bagneschi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Domenico",
+          "lastName": "Chiaradia",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gabriele",
+          "lastName": "Righi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Giulio Del",
+          "lastName": "Popolo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Antonio",
+          "lastName": "Frisoli",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniele",
+          "lastName": "Leonardis",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-17T11:30:56Z",
+      "dateModified": "2026-04-17T11:30:56Z",
+      "uri": "http://zotero.org/users/19851393/items/JX3QZUF5",
+      "itemID": 93,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://ieeexplore.ieee.org/ielx7/4543165/10158437/10122623.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-17T11:31:13Z",
+          "dateModified": "2026-04-17T11:31:13Z",
+          "uri": "http://zotero.org/users/19851393/items/DSRX9T4S",
+          "path": "/Users/rami/Zotero/storage/DSRX9T4S/Bagneschi et al. - 2023 - A Soft Hand Exoskeleton With a Novel Tendon Layout to Improve Stable Wearing in Grasping Assistance.pdf",
+          "select": "zotero://select/library/items/DSRX9T4S"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "url": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10122623&ref=",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-17T11:31:25Z",
+          "dateModified": "2026-04-17T11:31:25Z",
+          "uri": "http://zotero.org/users/19851393/items/IDITYXVP",
+          "path": "/Users/rami/Zotero/storage/IDITYXVP/Bagneschi et al. - 2023 - A Soft Hand Exoskeleton With a Novel Tendon Layout to Improve Stable Wearing in Grasping Assistance.pdf",
+          "select": "zotero://select/library/items/IDITYXVP"
+        }
+      ],
+      "notes": [],
+      "itemKey": "JX3QZUF5",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JX3QZUF5"
+    },
+    {
+      "key": "IF5PMF4P",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "Evolving concepts on bradykinesia",
+      "abstractNote": "Bradykinesia is one of the cardinal motor symptoms of Parkinson's disease and other parkinsonisms. The various clinical aspects related to bradykinesia and the pathophysiological mechanisms underlying bradykinesia are, however, still unclear. In this article, we review clinical and experimental studies on bradykinesia performed in patients with Parkinson's disease and atypical parkinsonism. We also review studies on animal experiments dealing with pathophysiological aspects of the parkinsonian state. In Parkinson's disease, bradykinesia is characterized by slowness, the reduced amplitude of movement, and sequence effect. These features are also present in atypical parkinsonisms, but the sequence effect is not common. Levodopa therapy improves bradykinesia, but treatment variably affects the bradykinesia features and does not significantly modify the sequence effect. Findings from animal and patients demonstrate the role of the basal ganglia and other interconnected structures, such as the primary motor cortex and cerebellum, as well as the contribution of abnormal sensorimotor processing. Bradykinesia should be interpreted as arising from network dysfunction. A better understanding of bradykinesia pathophysiology will serve as the new starting point for clinical and experimental purposes.",
+      "date": "2020-03-01",
+      "DOI": "10.1093/brain/awz344",
+      "citationKey": "bolognaEvolvingConceptsBradykinesia2020",
+      "language": "eng",
+      "libraryCatalog": "PubMed",
+      "volume": "143",
+      "pages": "727-750",
+      "publicationTitle": "Brain: A Journal of Neurology",
+      "ISSN": "1460-2156",
+      "issue": "3",
+      "journalAbbreviation": "Brain",
+      "PMID": "31834375",
+      "PMCID": "PMC8205506",
+      "creators": [
+        {
+          "firstName": "Matteo",
+          "lastName": "Bologna",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Giulia",
+          "lastName": "Paparella",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alfonso",
+          "lastName": "Fasano",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mark",
+          "lastName": "Hallett",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alfredo",
+          "lastName": "Berardelli",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Animals",
+          "type": 1
+        },
+        {
+          "tag": "bradykinesia",
+          "type": 1
+        },
+        {
+          "tag": "clinical neurophysiology",
+          "type": 1
+        },
+        {
+          "tag": "Humans",
+          "type": 1
+        },
+        {
+          "tag": "Hypokinesia",
+          "type": 1
+        },
+        {
+          "tag": "Levodopa",
+          "type": 1
+        },
+        {
+          "tag": "motor control",
+          "type": 1
+        },
+        {
+          "tag": "Neural Pathways",
+          "type": 1
+        },
+        {
+          "tag": "Parkinson’s disease",
+          "type": 1
+        },
+        {
+          "tag": "Parkinsonian Disorders",
+          "type": 1
+        },
+        {
+          "tag": "transcranial magnetic stimulation",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-04-06T15:59:25Z",
+      "dateModified": "2026-04-06T15:59:25Z",
+      "uri": "http://zotero.org/users/19851393/items/IF5PMF4P",
+      "itemID": 77,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://academic.oup.com/brain/article-pdf/143/3/727/32963682/awz344.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T15:59:28Z",
+          "dateModified": "2026-04-06T15:59:28Z",
+          "uri": "http://zotero.org/users/19851393/items/G4MFAVIT",
+          "path": "/Users/rami/Zotero/storage/G4MFAVIT/Bologna et al. - 2020 - Evolving concepts on bradykinesia.pdf",
+          "select": "zotero://select/library/items/G4MFAVIT"
+        },
+        {
+          "itemType": "attachment",
+          "title": "PubMed entry",
+          "url": "http://www.ncbi.nlm.nih.gov/pubmed/31834375",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T15:59:26Z",
+          "dateModified": "2026-04-06T15:59:26Z",
+          "uri": "http://zotero.org/users/19851393/items/L7RV5N3M",
+          "select": "zotero://select/library/items/L7RV5N3M"
+        }
+      ],
+      "notes": [],
+      "itemKey": "IF5PMF4P",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/IF5PMF4P"
+    },
+    {
+      "key": "BA2ASJZ4",
+      "version": 327,
+      "itemType": "journalArticle",
+      "title": "Exploring the impact of robotic hand rehabilitation on functional recovery in parkinson’s disease: a randomized controlled trial",
+      "abstractNote": "Background/Objective: Parkinson’s disease (PD) is characterized by motor and cognitive impairments that significantly affect quality of life. Robotic-assisted therapies, such as the AMADEO® system, have shown potential in rehabilitating upper limb function but are underexplored in PD. This study aimed to assess the effects of Robotic-Assisted Therapy (RAT) compared to Conventional Physical Therapy (CPT) on cognitive, motor, and functional outcomes in PD patients. Methods: A single-blind, randomized controlled trial was conducted with PD patients allocated to RAT or CPT. Participants were assessed at baseline (T0) and post-intervention (T1) using measures including MoCA, FAB, UPDRS-III, 9-Hole Peg Test, FMA-UE, FIM, and PDQ-39. Statistical analyses included ANCOVA and regression models. Results: RAT led to significant improvements in global cognition (MoCA, p ¡ 0.001) and executive functioning (FAB, p = 0.0002) compared to CPT. Motor function improved, particularly in wrist and hand control (FMA-UE), whereas changes in fine motor dexterity (9-Hole Peg Test) were less consistent and did not reach robust significance. No significant improvements were observed in broader quality of life domains, depressive symptoms, or memory-related cognitive measures. However, quality of life improved significantly in the stigma subdomain of the PDQ-39 (p = 0.0075). Regression analyses showed that baseline motor impairment predicted cognitive outcomes. Conclusions: RAT demonstrated superior cognitive and motor benefits in PD patients compared to CPT. These results support the integration of robotic rehabilitation into PD management. Further studies with larger sample sizes and long-term follow-up are needed to validate these findings and assess their sustainability.",
+      "date": "2025",
+      "DOI": "10.3390/brainsci15060644",
+      "citationKey": "brainsci15060644",
+      "url": "https://www.mdpi.com/2076-3425/15/6/644",
+      "extra": "Citation Key: brainsci15060644\nNumber: 644\ntex.pubmedid: 40563814",
+      "volume": "15",
+      "publicationTitle": "Brain Sciences",
+      "ISSN": "2076-3425",
+      "issue": "6",
+      "creators": [
+        {
+          "firstName": "Loredana",
+          "lastName": "Raciti",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Desiree",
+          "lastName": "Latella",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gianfranco",
+          "lastName": "Raciti",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chiara",
+          "lastName": "Sorbera",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mirjam",
+          "lastName": "Bonanno",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Laura",
+          "lastName": "Ciatto",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Giuseppe",
+          "lastName": "Andronaco",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Angelo",
+          "lastName": "Quartarone",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Giuseppe",
+          "lastName": "Di Lorenzo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rocco Salvatore",
+          "lastName": "Calabrò",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-27T13:26:14Z",
+      "dateModified": "2026-03-27T13:26:14Z",
+      "uri": "http://zotero.org/users/19851393/items/BA2ASJZ4",
+      "itemID": 69,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "url": "https://www.mdpi.com/2076-3425/15/6/644/pdf?version=1749955655",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-27T13:26:27Z",
+          "dateModified": "2026-03-27T13:26:27Z",
+          "uri": "http://zotero.org/users/19851393/items/NI3FU8NJ",
+          "path": "/Users/rami/Zotero/storage/NI3FU8NJ/Raciti et al. - 2025 - Exploring the impact of robotic hand rehabilitation on functional recovery in parkinson’s disease a.pdf",
+          "select": "zotero://select/library/items/NI3FU8NJ"
+        }
+      ],
+      "notes": [],
+      "itemKey": "BA2ASJZ4",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/BA2ASJZ4"
+    },
+    {
+      "key": "PL9BWHHV",
+      "version": 111,
+      "itemType": "journalArticle",
+      "title": "Design and feasibility of the T-GRIP thumb exoskeleton to support the lateral pinch grasp of spinal cord injury patients",
+      "date": "2022",
+      "DOI": "10.1109/ICORR55369.2022.9896595",
+      "citationKey": "DOI_10_1109_ICORR55369_2022_9896595",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36176123/",
+      "extra": "Citation Key: DOI_10_1109_ICORR55369_2022_9896595",
+      "publicationTitle": "IEEE International Conference on Rehabilitation Robotics",
+      "creators": [
+        {
+          "firstName": "Claudia J. W. Haarman; Edsko E. G. Hekman; Ellen M. Maas; Johan S. Rietman; Herman",
+          "lastName": "van der Kooij",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "high"
+        },
+        {
+          "tag": "shortlist"
+        },
+        {
+          "tag": "T007"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-23T09:27:57Z",
+      "dateModified": "2026-03-23T09:27:57Z",
+      "uri": "http://zotero.org/users/19851393/items/PL9BWHHV",
+      "itemID": 32,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-25T22:39:44Z",
+          "dateModified": "2026-03-25T22:39:44Z",
+          "uri": "http://zotero.org/users/19851393/items/TP57Q6VE",
+          "path": "/Users/rami/Zotero/storage/TP57Q6VE/van der Kooij - 2022 - Design and feasibility of the T-GRIP thumb exoskeleton to support the lateral pinch grasp of spinal.pdf",
+          "select": "zotero://select/library/items/TP57Q6VE"
+        }
+      ],
+      "notes": [
+        {
+          "key": "ZIIW7FR8",
+          "version": 107,
+          "itemType": "note",
+          "parentItem": "PL9BWHHV",
+          "note": "Strong candidate because it is mechanically close to the thumb-index opposition framing now requested.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-23T09:27:57Z",
+          "dateModified": "2026-03-23T09:27:57Z",
+          "uri": "http://zotero.org/users/19851393/items/ZIIW7FR8"
+        }
+      ],
+      "itemKey": "PL9BWHHV",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/PL9BWHHV"
+    },
+    {
+      "key": "ET6L8PYY",
+      "version": 111,
+      "itemType": "journalArticle",
+      "title": "Design and optimization of a custom-made six-bar exoskeleton for pulp pinch grasp rehabilitation in stroke patients",
+      "date": "2024",
+      "DOI": "10.3390/biomimetics9100616",
+      "citationKey": "DOI_10_3390_biomimetics9100616",
+      "url": "https://www.mdpi.com/2313-7673/9/10/616",
+      "extra": "Citation Key: DOI_10_3390_biomimetics9100616",
+      "publicationTitle": "Biomimetics",
+      "creators": [
+        {
+          "firstName": "Javier Andrés-Esperanza; José L. Iserte-Vilar; Víctor",
+          "lastName": "Roda-Casanova",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "high"
+        },
+        {
+          "tag": "shortlist"
+        },
+        {
+          "tag": "T006"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-23T09:27:57Z",
+      "dateModified": "2026-03-23T09:27:57Z",
+      "uri": "http://zotero.org/users/19851393/items/ET6L8PYY",
+      "itemID": 30,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "url": "https://www.mdpi.com/2313-7673/9/10/616/pdf?version=1728638766",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-23T09:43:03Z",
+          "dateModified": "2026-03-23T09:43:03Z",
+          "uri": "http://zotero.org/users/19851393/items/9XECBFE9",
+          "path": "/Users/rami/Zotero/storage/9XECBFE9/Roda-Casanova - 2024 - Design and optimization of a custom-made six-bar exoskeleton for pulp pinch grasp rehabilitation in.pdf",
+          "select": "zotero://select/library/items/9XECBFE9"
+        }
+      ],
+      "notes": [
+        {
+          "key": "LWH4PE6G",
+          "version": 107,
+          "itemType": "note",
+          "parentItem": "ET6L8PYY",
+          "note": "Very likely one of the best first papers for the next review because the target motion is explicitly pulp pinch.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-23T09:27:57Z",
+          "dateModified": "2026-03-23T09:27:57Z",
+          "uri": "http://zotero.org/users/19851393/items/LWH4PE6G"
+        }
+      ],
+      "itemKey": "ET6L8PYY",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ET6L8PYY"
+    },
+    {
+      "key": "8MCJPW74",
+      "version": 525,
+      "itemType": "journalArticle",
+      "title": "Configuration identification of on-demand variable stiffness strain-limiting layers in zig-zag soft pneumatic actuators using deep learning methods",
+      "abstractNote": "Soft pneumatic actuators (SPAs) typically offer a fixed trajectory, resulting in one specific tip motion for a given range of pressure. When multiple trajectories are needed, these actuators require re-fabrication with altered structural designs, with different lengths, chamber sizes, and wall thicknesses etc. Passive modular variable stiffness SPAs present a significant advantage by enabling the realization of many distinct trajectories without structural redesign. Although various mathematical modeling techniques are widely used to predict their tip motion by treating it a kinematics problem, solving the inverse problem in the presence of modular strain-limiting layer (SLL) configurations is challenging. It is essential to determine the configuration of such a slender actuator in the form of a robot manipulator to deploy it for a specific function and application without re-fabricating them, by simply varying the SLL per the configuration required for a particular tip-point trajectory. To this aim, this paper introduces a hybrid methodology (based on feed-forward neural network) and a convolutional neural network-based method to predict the required SLL configuration for a particular tip trajectory of the SPA. This methodology is generic enough to apply to such actuators to predict their configuration as per their specific tip point trajectory in Cartesian space. The results presented for a slender SPA have demonstrated that the proposed method has predicted its configurations for a range of applications typified by an endoscope prototype, a soft robotic gripping application, and a system mimicking human finger movement with an average error of 1.65%. This study offers a versatile methodology for “function and application specific” SPAs or robot manipulators without re-fabricating them, by strategically combining SLL and machine learning-based prediction to generate a specific trajectory.",
+      "date": "04/2026",
+      "DOI": "10.1177/02783649251364287",
+      "citationKey": "gunawardaneConfigurationIdentificationOndemand2026",
+      "url": "https://journals.sagepub.com/doi/10.1177/02783649251364287",
+      "accessDate": "2026-04-17T06:49:44Z",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "45",
+      "pages": "628-644",
+      "publicationTitle": "The International Journal of Robotics Research",
+      "ISSN": "0278-3649, 1741-3176",
+      "issue": "4",
+      "journalAbbreviation": "The International Journal of Robotics Research",
+      "creators": [
+        {
+          "firstName": "Palpolage Don Shehan Hiroshan",
+          "lastName": "Gunawardane",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Duhyeon",
+          "lastName": "Lee",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Phoebe",
+          "lastName": "Cheung",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hao",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gursel",
+          "lastName": "Alici",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mu",
+          "lastName": "Chiao",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-17T06:49:44Z",
+      "dateModified": "2026-04-17T06:49:44Z",
+      "uri": "http://zotero.org/users/19851393/items/8MCJPW74",
+      "itemID": 87,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "SAGE PDF Full Text",
+          "url": "https://journals.sagepub.com/doi/pdf/10.1177/02783649251364287",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-17T08:02:28Z",
+          "dateModified": "2026-04-17T08:02:28Z",
+          "uri": "http://zotero.org/users/19851393/items/FH7XNKU8",
+          "path": "/Users/rami/Zotero/storage/FH7XNKU8/Gunawardane et al. - 2026 - Configuration identification of on-demand variable stiffness strain-limiting layers in zig-zag soft.pdf",
+          "select": "zotero://select/library/items/FH7XNKU8"
+        }
+      ],
+      "notes": [],
+      "itemKey": "8MCJPW74",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/8MCJPW74"
+    },
+    {
+      "key": "8DTBIX7W",
+      "version": 205,
+      "itemType": "journalArticle",
+      "title": "Vision-Based Finger Tapping Test in Patients With Parkinson’s Disease via Spatial-Temporal 3D Hand Pose Estimation",
+      "date": "8/2022",
+      "DOI": "10.1109/JBHI.2022.3162386",
+      "citationKey": "guoVisionBasedFingerTapping2022",
+      "url": "https://ieeexplore.ieee.org/document/9744332/",
+      "accessDate": "2026-03-24T16:02:10Z",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "rights": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html",
+      "volume": "26",
+      "pages": "3848-3859",
+      "publicationTitle": "IEEE Journal of Biomedical and Health Informatics",
+      "ISSN": "2168-2194, 2168-2208",
+      "issue": "8",
+      "journalAbbreviation": "IEEE J. Biomed. Health Inform.",
+      "creators": [
+        {
+          "firstName": "Zhilin",
+          "lastName": "Guo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Weiqi",
+          "lastName": "Zeng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Taidong",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yan",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yang",
+          "lastName": "Xiao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xuebing",
+          "lastName": "Cao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhiguo",
+          "lastName": "Cao",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-24T16:02:10Z",
+      "dateModified": "2026-03-24T16:02:10Z",
+      "uri": "http://zotero.org/users/19851393/items/8DTBIX7W",
+      "itemID": 55,
+      "attachments": [],
+      "notes": [],
+      "itemKey": "8DTBIX7W",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/8DTBIX7W"
+    },
+    {
+      "key": "AK9DKBWB",
+      "version": 570,
+      "itemType": "journalArticle",
+      "title": "Exo-Glove Poly II: A Polymer-Based Soft Wearable Robot for the Hand with a Tendon-Driven Actuation System",
+      "abstractNote": "Abstract\n            This article presents Exo-Glove Poly (EGP) II, a soft wearable robot for the hand with a glove that is completely constructed of polymer materials and that operates through tendon-driven actuation for use in spinal cord injury (SCI). EGP II can restore the ability to pinch and grasp any object for people with SCI in daily life. The design of the glove allows it to be compact and extends the range of hand sizes that can fit. A passive thumb structure was developed to oppose the thumb for improved grasping. To increase the robustness of the glove, EGP II was designed to have a minimal number of components using a single material. A kinematic model of the system was used to optimize the design parameters of an antagonistic tendon routing system on a single actuator for various hand sizes and repeated actuations. Experiments were conducted on two subjects with SCI to verify the grasping performance of EGP II. EGP II has a compact glove and an actuation system that can be placed on a desk or wheelchair, with the weights of 104 g and 1.14 kg, respectively.",
+      "date": "2019-04-01",
+      "DOI": "10.1089/soro.2018.0006",
+      "citationKey": "kangExoGlovePolyII2019",
+      "url": "https://journals.sagepub.com/doi/10.1089/soro.2018.0006",
+      "accessDate": "2026-04-20T09:43:27Z",
+      "shortTitle": "Exo-Glove Poly II",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "6",
+      "pages": "214-227",
+      "publicationTitle": "Soft Robotics",
+      "ISSN": "2169-5172, 2169-5180",
+      "issue": "2",
+      "journalAbbreviation": "Soft Robotics",
+      "creators": [
+        {
+          "firstName": "Brian Byunghyun",
+          "lastName": "Kang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hyungmin",
+          "lastName": "Choi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Haemin",
+          "lastName": "Lee",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kyu-Jin",
+          "lastName": "Cho",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-20T09:43:27Z",
+      "dateModified": "2026-04-20T09:43:27Z",
+      "uri": "http://zotero.org/users/19851393/items/AK9DKBWB",
+      "itemID": 96,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-20T09:44:32Z",
+          "dateModified": "2026-04-20T09:44:32Z",
+          "uri": "http://zotero.org/users/19851393/items/VFJB322I",
+          "path": "/Users/rami/Zotero/storage/VFJB322I/Kang et al. - 2019 - Exo-Glove Poly II A Polymer-Based Soft Wearable Robot for the Hand with a Tendon-Driven Actuation S.pdf",
+          "select": "zotero://select/library/items/VFJB322I"
+        }
+      ],
+      "notes": [],
+      "itemKey": "AK9DKBWB",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/AK9DKBWB"
+    },
+    {
+      "key": "5FMUJP7H",
+      "version": 447,
+      "itemType": "journalArticle",
+      "title": "From simulation to reality: a variable-stiffness robot",
+      "citationKey": "mattelaerSimulationRealityVariablestiffness",
+      "language": "en",
+      "libraryCatalog": "Zotero",
+      "creators": [
+        {
+          "firstName": "Louise",
+          "lastName": "Mattelaer",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-10T13:37:55Z",
+      "dateModified": "2026-04-10T13:37:55Z",
+      "uri": "http://zotero.org/users/19851393/items/5FMUJP7H",
+      "itemID": 86,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-10T13:37:53Z",
+          "dateModified": "2026-04-10T13:37:55Z",
+          "uri": "http://zotero.org/users/19851393/items/AE8C2X9N",
+          "path": "/Users/rami/Zotero/storage/AE8C2X9N/Mattelaer - From simulation to reality a variable-stiffness robot.pdf",
+          "select": "zotero://select/library/items/AE8C2X9N"
+        }
+      ],
+      "notes": [],
+      "itemKey": "5FMUJP7H",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/5FMUJP7H"
+    },
+    {
+      "key": "TQQ8AV29",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "The usefulness of assistive soft robotics in the rehabilitation of patients with hand impairment: A systematic review",
+      "date": "2024",
+      "citationKey": "P2024_Jiryaei_SoftRehabReview",
+      "extra": "Citation Key: P2024_Jiryaei_SoftRehabReview",
+      "publicationTitle": "Journal of Bodywork and Movement Therapies",
+      "creators": [
+        {
+          "firstName": "Zahra Jiryaei; Amir Salar",
+          "lastName": "Jafarpisheh",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "screening"
+        },
+        {
+          "tag": "low"
+        },
+        {
+          "tag": "T005"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/TQQ8AV29",
+      "itemID": 19,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "2W2F8QZA",
+          "version": 31,
+          "itemType": "note",
+          "parentItem": "TQQ8AV29",
+          "note": "Useful mainly to avoid overclaiming novelty or clinical relevance.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/2W2F8QZA"
+        }
+      ],
+      "itemKey": "TQQ8AV29",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/TQQ8AV29"
+    },
+    {
+      "key": "WVPJHL39",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "Validity and reliability of a finger training tool for assessing metacarpal phalangeal joint ranges of motion in asymptomatic participants",
+      "date": "2024",
+      "citationKey": "P2024_Kuvijitsuwan_FingerROM",
+      "extra": "Citation Key: P2024_Kuvijitsuwan_FingerROM",
+      "publicationTitle": "Scientific Reports",
+      "creators": [
+        {
+          "firstName": "P. Kuvijitsuwan; J. Klaphajone; P. Singjai; T. Kumpika; N. Thawinchai; C. Angkurawaranon; C. Aramrat; K.",
+          "lastName": "Utarachon",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "medium"
+        },
+        {
+          "tag": "screening"
+        },
+        {
+          "tag": "T004"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/WVPJHL39",
+      "itemID": 17,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "DTXBIQHU",
+          "version": 31,
+          "itemType": "note",
+          "parentItem": "WVPJHL39",
+          "note": "Useful now because validation metrics are already in thesis scope even before hardware build.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/DTXBIQHU"
+        }
+      ],
+      "itemKey": "WVPJHL39",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/WVPJHL39"
+    },
+    {
+      "key": "QJAXYH2I",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "A tendon-driven actuator with cantilever initiated variable stiffness used for robotic fingers",
+      "date": "2024",
+      "citationKey": "P2024_Li_TVSAFinger",
+      "extra": "Citation Key: P2024_Li_TVSAFinger",
+      "publicationTitle": "Mechanism and Machine Theory",
+      "creators": [
+        {
+          "firstName": "Chenning Li; Shangkui Yang; David T. Branson; Zhibin Song; Tao Sun; Jian S. Dai; Rongjie",
+          "lastName": "Kang",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "high"
+        },
+        {
+          "tag": "shortlist"
+        },
+        {
+          "tag": "T002"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/QJAXYH2I",
+      "itemID": 9,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "MWFIQW5Q",
+          "version": 23,
+          "itemType": "note",
+          "parentItem": "QJAXYH2I",
+          "note": "This is one of the closest recent matches to the thesis mechanism question.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/MWFIQW5Q"
+        }
+      ],
+      "itemKey": "QJAXYH2I",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/QJAXYH2I"
+    },
+    {
+      "key": "TZ2PNGNX",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "Soft pneumatic actuators for pushing fingers into extension",
+      "date": "2024",
+      "citationKey": "P2024_McCall_SoftPneumaticExtension",
+      "extra": "Citation Key: P2024_McCall_SoftPneumaticExtension",
+      "publicationTitle": "Journal of NeuroEngineering and Rehabilitation",
+      "creators": [
+        {
+          "firstName": "James V. McCall; Gregory D. Buckner; Derek G.",
+          "lastName": "Kamper",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "high"
+        },
+        {
+          "tag": "shortlist"
+        },
+        {
+          "tag": "T001"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/TZ2PNGNX",
+      "itemID": 5,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "SDJF5XXB",
+          "version": 23,
+          "itemType": "note",
+          "parentItem": "TZ2PNGNX",
+          "note": "Current thesis task needs strong actuator exemplars tied to simulation-first design choices.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/SDJF5XXB"
+        }
+      ],
+      "itemKey": "TZ2PNGNX",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/TZ2PNGNX"
+    },
+    {
+      "key": "N4D392KK",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "Design of a haptic device with variable stiffness actuation mechanism for finger rehabilitation",
+      "date": "2024",
+      "citationKey": "P2024_Tabrizi_HapticVSA",
+      "extra": "Citation Key: P2024_Tabrizi_HapticVSA",
+      "publicationTitle": "Proceedings of the 11th International Conference of Control Systems and Robotics",
+      "creators": [
+        {
+          "firstName": "Arash Basirat Tabrizi; Jeremy Catania; Baiqian Qi; Kourosh",
+          "lastName": "Zareinia",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "medium"
+        },
+        {
+          "tag": "screening"
+        },
+        {
+          "tag": "T002"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/N4D392KK",
+      "itemID": 11,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "9W97U395",
+          "version": 23,
+          "itemType": "note",
+          "parentItem": "N4D392KK",
+          "note": "Useful as a feasibility reference even if evidence depth is lower than journal papers.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/9W97U395"
+        }
+      ],
+      "itemKey": "N4D392KK",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/N4D392KK"
+    },
+    {
+      "key": "DDM8DW32",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "Design and control of a tendon-driven robotic finger based on grasping task analysis",
+      "date": "2024",
+      "citationKey": "P2024_Zhou_TendonDrivenFinger",
+      "extra": "Citation Key: P2024_Zhou_TendonDrivenFinger",
+      "publicationTitle": "Biomimetics",
+      "creators": [
+        {
+          "firstName": "Xuanyi Zhou; Hao Fu; Baoqing Shentu; Weidong Wang; Shibo Cai; Guanjun",
+          "lastName": "Bao",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "high"
+        },
+        {
+          "tag": "shortlist"
+        },
+        {
+          "tag": "T003"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/DDM8DW32",
+      "itemID": 13,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "9Q6GRPXG",
+          "version": 23,
+          "itemType": "note",
+          "parentItem": "DDM8DW32",
+          "note": "Current thesis work needs reduced-complexity references before selecting a finger abstraction.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/9Q6GRPXG"
+        }
+      ],
+      "itemKey": "DDM8DW32",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/DDM8DW32"
+    },
+    {
+      "key": "YK72EAB8",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "Assist-as-needed control of a soft rehabilitation robot for the finger using an interaction torque observer",
+      "date": "2025",
+      "citationKey": "P2025_Besharati_AANSoftFinger",
+      "extra": "Citation Key: P2025_Besharati_AANSoftFinger",
+      "publicationTitle": "European Journal of Control",
+      "creators": [
+        {
+          "firstName": "Alireza Besharati; Afshin Taghvaeipour; Ali Kamali E.; Mohammad",
+          "lastName": "Zareinejad",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "T001"
+        },
+        {
+          "tag": "medium"
+        },
+        {
+          "tag": "screening"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/YK72EAB8",
+      "itemID": 7,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "CG8ENTF6",
+          "version": 23,
+          "itemType": "note",
+          "parentItem": "YK72EAB8",
+          "note": "Recent finger-specific control paper that may sharpen controllability metrics before model implementation.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/CG8ENTF6"
+        }
+      ],
+      "itemKey": "YK72EAB8",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/YK72EAB8"
+    },
+    {
+      "key": "B96LN626",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "Predicting the response of a tendon-driven prosthetic finger with hyperelastic joints",
+      "date": "2025",
+      "DOI": "10.1016/j.rineng.2025.106979",
+      "citationKey": "P2025_Gallup_TendonHyperelasticFinger",
+      "extra": "Citation Key: P2025_Gallup_TendonHyperelasticFinger",
+      "publicationTitle": "Results in Engineering",
+      "creators": [
+        {
+          "firstName": "Lucas Gallup; Mohamed Trabia; Brendan",
+          "lastName": "O'Toole",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "high"
+        },
+        {
+          "tag": "shortlist"
+        },
+        {
+          "tag": "T003"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T15:23:36Z",
+      "uri": "http://zotero.org/users/19851393/items/B96LN626",
+      "itemID": 15,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T15:43:02Z",
+          "dateModified": "2026-03-19T15:43:02Z",
+          "uri": "http://zotero.org/users/19851393/items/GJTAQXZU",
+          "path": "/Users/rami/Zotero/storage/GJTAQXZU/O'Toole - 2025 - Predicting the response of a tendon-driven prosthetic finger with hyperelastic joints.pdf",
+          "select": "zotero://select/library/items/GJTAQXZU"
+        }
+      ],
+      "notes": [
+        {
+          "key": "FWNTKB8W",
+          "version": 31,
+          "itemType": "note",
+          "parentItem": "B96LN626",
+          "note": "This is a strong candidate to anchor the first model-class decision.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/FWNTKB8W"
+        }
+      ],
+      "itemKey": "B96LN626",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/B96LN626"
+    },
+    {
+      "key": "6CLBTPC9",
+      "version": 97,
+      "itemType": "journalArticle",
+      "title": "Robotic systems for hand rehabilitation—past, present and future",
+      "date": "2025",
+      "citationKey": "P2025_Gherman_HandRehabReview",
+      "extra": "Citation Key: P2025_Gherman_HandRehabReview",
+      "publicationTitle": "Technologies",
+      "creators": [
+        {
+          "firstName": "Bogdan Gherman; Ionut Zima; Calin Vaida; Paul Tucan; Adrian Pisla; Iosif Birlescu; Jose Machado; Doina",
+          "lastName": "Pisla",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "medium"
+        },
+        {
+          "tag": "screening"
+        },
+        {
+          "tag": "T005"
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-03-19T14:41:19Z",
+      "dateModified": "2026-03-19T14:41:19Z",
+      "uri": "http://zotero.org/users/19851393/items/6CLBTPC9",
+      "itemID": 21,
+      "attachments": [],
+      "notes": [
+        {
+          "key": "UUB6YS7M",
+          "version": 31,
+          "itemType": "note",
+          "parentItem": "6CLBTPC9",
+          "note": "Useful for grounding the thesis in current device classes without spending too much time on peripheral papers.",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-19T14:41:19Z",
+          "dateModified": "2026-03-19T14:41:19Z",
+          "uri": "http://zotero.org/users/19851393/items/UUB6YS7M"
+        }
+      ],
+      "itemKey": "6CLBTPC9",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/6CLBTPC9"
+    },
+    {
+      "key": "ZMN7IB8G",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "Analyzing the ‘Bradykinesia Complex’ in Parkinson's Disease",
+      "abstractNote": "Abstract\n            \n              Background\n              Bradykinesia is the hallmark sign of parkinsonism. We recently proposed redefining bradykinesia as a complex of motor abnormalities, each reflecting separate pathophysiological elements.\n            \n            \n              Objective\n              To analyze the ‘bradykinesia complex’ in Parkinson's disease (PD) and healthy elderly individuals.\n            \n            \n              Methods\n              We conducted a finger‐tapping kinematic analysis in 350 individuals (192 PD patients OFF medication and 158 healthy controls). A subsample of 129 patients was also tested ON medication. Group comparisons were followed by unsupervised clustering. Receiver operating characteristic (ROC) analyses defined optimal kinematic cut‐offs to detect individual motor abnormalities. We then quantified the prevalence and combinations of these features per subject. Using Bayes' theorem, we estimated the probability of PD based on the observed combination of bradykinesia features. Regression analyses served to identify predictors of kinematic alterations.\n            \n            \n              Results\n              \n                Patients exhibited reduced velocity and amplitude as well as altered rhythm and sequence effect compared with controls (all\n                P‐\n                values < 0.001). Cluster analysis revealed substantial group overlap. ROC analyses showed that bradykinesia (movement slowness) was the most common and accurate feature for distinguishing PD, with its diagnostic power improving when combined with other motor abnormalities (hypokinesia, dysrhythmia, sequence effect). The likelihood of correctly identifying PD increased with the number of observed abnormalities, reaching up to 95% when all features were present. Levodopa improved motor performance, but the motor abnormality patterns remained unchanged.\n              \n            \n            \n              Conclusions\n              \n                The detailed bradykinesia features assessment was crucial for differentiating PD individuals from controls. Diagnostic accuracy requires considering multiple motor abnormalities together, irrespective of the specific combination. Advancing our understanding of the ‘bradykinesia complex’ has clinical and pathophysiological implications. © 2025 The Author(s).\n                Movement Disorders\n                published by Wiley Periodicals LLC on behalf of International Parkinson and Movement Disorder Society.",
+      "date": "01/2026",
+      "DOI": "10.1002/mds.70082",
+      "citationKey": "paparellaAnalyzingBradykinesiaComplex2026",
+      "url": "https://movementdisorders.onlinelibrary.wiley.com/doi/10.1002/mds.70082",
+      "accessDate": "2026-04-06T16:12:42Z",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "41",
+      "pages": "143-155",
+      "publicationTitle": "Movement Disorders",
+      "ISSN": "0885-3185, 1531-8257",
+      "issue": "1",
+      "journalAbbreviation": "Movement Disorders",
+      "creators": [
+        {
+          "firstName": "Giulia",
+          "lastName": "Paparella",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Martina",
+          "lastName": "De Riggi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Antonio",
+          "lastName": "Cannavacciuolo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniele",
+          "lastName": "Birreci",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Davide",
+          "lastName": "Costa",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luca",
+          "lastName": "Angelini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Danilo",
+          "lastName": "Alunni Fegatelli",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alfonso",
+          "lastName": "Fasano",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alberto J.",
+          "lastName": "Espay",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Matteo",
+          "lastName": "Bologna",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-06T16:12:42Z",
+      "dateModified": "2026-04-06T16:12:42Z",
+      "uri": "http://zotero.org/users/19851393/items/ZMN7IB8G",
+      "itemID": 80,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mds.70082",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T16:12:45Z",
+          "dateModified": "2026-04-06T16:12:45Z",
+          "uri": "http://zotero.org/users/19851393/items/TLLP8PQ8",
+          "path": "/Users/rami/Zotero/storage/TLLP8PQ8/Paparella et al. - 2026 - Analyzing the ‘Bradykinesia Complex’ in Parkinson's Disease.pdf",
+          "select": "zotero://select/library/items/TLLP8PQ8"
+        }
+      ],
+      "notes": [
+        {
+          "key": "784VGFP5",
+          "version": 402,
+          "itemType": "note",
+          "parentItem": "ZMN7IB8G",
+          "note": "<div data-schema-version=\"9\"><p><strong>Healthy individuals may show isolated motor features, but Parkinson’s disease is characterized by the co-occurrence of multiple bradykinesia-related abnormalities, especially in combination.</strong></p>\n<p></p>\n</div>",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T16:12:48Z",
+          "dateModified": "2026-04-06T16:12:57Z",
+          "uri": "http://zotero.org/users/19851393/items/784VGFP5"
+        }
+      ],
+      "itemKey": "ZMN7IB8G",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ZMN7IB8G"
+    },
+    {
+      "key": "2JXXMKZZ",
+      "version": 174,
+      "itemType": "journalArticle",
+      "title": "Post-traumatic hand rehabilitation using a powered metacarpal-phalangeal exoskeleton: a pilot study",
+      "date": "2024-12-19",
+      "DOI": "10.1186/s12984-024-01511-w",
+      "citationKey": "peperoniPosttraumaticHandRehabilitation2024",
+      "url": "https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-024-01511-w",
+      "accessDate": "2026-03-23T19:12:20Z",
+      "shortTitle": "Post-traumatic hand rehabilitation using a powered metacarpal-phalangeal exoskeleton",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "21",
+      "pages": "214",
+      "publicationTitle": "Journal of NeuroEngineering and Rehabilitation",
+      "ISSN": "1743-0003",
+      "issue": "1",
+      "journalAbbreviation": "J NeuroEngineering Rehabil",
+      "creators": [
+        {
+          "firstName": "Emanuele",
+          "lastName": "Peperoni",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Emilio",
+          "lastName": "Trigili",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Eugenio",
+          "lastName": "Capotorti",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Stefano Laszlo",
+          "lastName": "Capitani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tommaso",
+          "lastName": "Fiumalbi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Foebe",
+          "lastName": "Pettinelli",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sara",
+          "lastName": "Grandi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alberto",
+          "lastName": "Rapalli",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Giulia",
+          "lastName": "Lentini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ilaria",
+          "lastName": "Creatini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nicola",
+          "lastName": "Vitiello",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Elisa",
+          "lastName": "Taglione",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Simona",
+          "lastName": "Crea",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-23T19:12:20Z",
+      "dateModified": "2026-03-23T19:12:20Z",
+      "uri": "http://zotero.org/users/19851393/items/2JXXMKZZ",
+      "itemID": 47,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://jneuroengrehab.biomedcentral.com/counter/pdf/10.1186/s12984-024-01511-w",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-23T19:12:22Z",
+          "dateModified": "2026-03-23T19:12:22Z",
+          "uri": "http://zotero.org/users/19851393/items/83J5QNZ8",
+          "path": "/Users/rami/Zotero/storage/83J5QNZ8/Peperoni et al. - 2024 - Post-traumatic hand rehabilitation using a powered metacarpal-phalangeal exoskeleton a pilot study.pdf",
+          "select": "zotero://select/library/items/83J5QNZ8"
+        }
+      ],
+      "notes": [],
+      "itemKey": "2JXXMKZZ",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/2JXXMKZZ"
+    },
+    {
+      "key": "ECHXH4Q4",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "Self-Aligning Finger Exoskeleton for the Mobilization of the Metacarpophalangeal Joint",
+      "date": "2023",
+      "DOI": "10.1109/TNSRE.2023.3236070",
+      "citationKey": "peperoniSelfAligningFingerExoskeleton2023",
+      "url": "https://ieeexplore.ieee.org/document/10015090/",
+      "accessDate": "2026-03-23T18:16:49Z",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "rights": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "volume": "31",
+      "pages": "884-894",
+      "publicationTitle": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+      "ISSN": "1534-4320, 1558-0210",
+      "journalAbbreviation": "IEEE Trans. Neural Syst. Rehabil. Eng.",
+      "creators": [
+        {
+          "firstName": "Emanuele",
+          "lastName": "Peperoni",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Stefano Laszlo",
+          "lastName": "Capitani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tommaso",
+          "lastName": "Fiumalbi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Eugenio",
+          "lastName": "Capotorti",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Andrea",
+          "lastName": "Baldoni",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Filippo",
+          "lastName": "Dell'Agnello",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ilaria",
+          "lastName": "Creatini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Elisa",
+          "lastName": "Taglione",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nicola",
+          "lastName": "Vitiello",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Emilio",
+          "lastName": "Trigili",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Simona",
+          "lastName": "Crea",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-23T18:16:49Z",
+      "dateModified": "2026-03-23T18:16:49Z",
+      "uri": "http://zotero.org/users/19851393/items/ECHXH4Q4",
+      "itemID": 45,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://ieeexplore.ieee.org/ielx7/7333/10031624/10015090.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-23T18:16:53Z",
+          "dateModified": "2026-03-23T18:16:53Z",
+          "uri": "http://zotero.org/users/19851393/items/BBZ5THAB",
+          "path": "/Users/rami/Zotero/storage/BBZ5THAB/Peperoni et al. - 2023 - Self-Aligning Finger Exoskeleton for the Mobilization of the Metacarpophalangeal Joint.pdf",
+          "select": "zotero://select/library/items/BBZ5THAB"
+        }
+      ],
+      "notes": [],
+      "itemKey": "ECHXH4Q4",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ECHXH4Q4"
+    },
+    {
+      "key": "DMLLX4SW",
+      "version": 572,
+      "itemType": "journalArticle",
+      "title": "Development and Validation of Customizable, Adaptive SPring-Actuated Hand EXoskeleton (CASPHEX) Designed for Home-Based Training of Finger Movements Post-Stroke",
+      "date": "2025",
+      "DOI": "10.1109/TNSRE.2025.3615078",
+      "citationKey": "phanDevelopmentValidationCustomizable2025",
+      "url": "https://ieeexplore.ieee.org/document/11181215/",
+      "accessDate": "2026-04-20T10:19:38Z",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "rights": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "volume": "33",
+      "pages": "4018-4030",
+      "publicationTitle": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+      "ISSN": "1534-4320, 1558-0210",
+      "journalAbbreviation": "IEEE Trans. Neural Syst. Rehabil. Eng.",
+      "creators": [
+        {
+          "firstName": "Thanh Q.",
+          "lastName": "Phan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mada",
+          "lastName": "Alghamdi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mary",
+          "lastName": "Egwim",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sang Wook",
+          "lastName": "Lee",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-20T10:19:38Z",
+      "dateModified": "2026-04-20T10:19:38Z",
+      "uri": "http://zotero.org/users/19851393/items/DMLLX4SW",
+      "itemID": 99,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-20T10:19:35Z",
+          "dateModified": "2026-04-20T10:19:38Z",
+          "uri": "http://zotero.org/users/19851393/items/MG69DR5L",
+          "path": "/Users/rami/Zotero/storage/MG69DR5L/Phan et al. - 2025 - Development and Validation of Customizable, Adaptive SPring-Actuated Hand EXoskeleton (CASPHEX) Desi.pdf",
+          "select": "zotero://select/library/items/MG69DR5L"
+        }
+      ],
+      "notes": [],
+      "itemKey": "DMLLX4SW",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/DMLLX4SW"
+    },
+    {
+      "key": "DLB7JVI3",
+      "version": 348,
+      "itemType": "journalArticle",
+      "title": "Improving Upper Extremity Bradykinesia in Parkinson’s Disease: A Randomized Clinical Trial on the Use of Gravity-Supporting Exoskeletons",
+      "abstractNote": "Hand movements are particularly impaired in patients with Parkinson’s Disease (PD), contributing to functional disability and difficulties in activities of daily living. Growing evidence has shown that robot-assisted therapy may be considered an effective and reliable method for the delivery of the highly repetitive training that is needed to trigger neuroplasticity, as intensive, repetitive and task-oriented training could be an ideal strategy to facilitate the relearning of motor function and to minimize motor deficit. The purpose of this study is to evaluate the improvement of hand function with semi-autonomous exercises using an upper extremity exoskeleton in patients with PD. A multicenter, parallel-group, randomized clinical trial was then carried out at the IRCCS Centro Neurolesi Bonino-Pulejo (Messina, Italy). Thirty subjects with a diagnosis of PD and a Hoehn–Yahr score between 2 and 3 were enrolled in the study. Patients were 1:1 randomized into either the experimental group (ERT), receiving 45 min training daily, 6 days weekly, for 8 weeks with Armeo®Spring (Volketswil, Switzerland) (a gravity-supporting device), or the control group (CPT), which was subjected to the same amount of conventional physical therapy. Motor abilities were assessed before and after the end of the training. The main outcomes measures were the Nine-hole peg test and the motor section of the UPDRS. All patients belonging to ERT and 9 out of 15 patients belonging to the CPT completed the trial. ERT showed a greater improvement in the primary outcome measure (nine-hole peg test) than CPT. Moreover, a statistically significant improvement was found in ERT concerning upper limb mobility, and disease burden as compared to CPT. Using an upper extremity exoskeleton (i.e., the Armeo®Spring) for semi-autonomous training in an inpatient setting is a new perspective to train patients with PD to improve their dexterity, executive function and, potentially, quality of life.",
+      "date": "2022-05-01",
+      "DOI": "10.3390/jcm11092543",
+      "citationKey": "racitiImprovingUpperExtremity2022",
+      "url": "https://www.mdpi.com/2077-0383/11/9/2543",
+      "accessDate": "2026-04-06T09:36:26Z",
+      "shortTitle": "Improving Upper Extremity Bradykinesia in Parkinson’s Disease",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "11",
+      "pages": "2543",
+      "publicationTitle": "Journal of Clinical Medicine",
+      "ISSN": "2077-0383",
+      "issue": "9",
+      "journalAbbreviation": "JCM",
+      "creators": [
+        {
+          "firstName": "Loredana",
+          "lastName": "Raciti",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Loris",
+          "lastName": "Pignolo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Valentina",
+          "lastName": "Perini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Massimo",
+          "lastName": "Pullia",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bruno",
+          "lastName": "Porcari",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Desiree",
+          "lastName": "Latella",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marco",
+          "lastName": "Isgrò",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Antonino",
+          "lastName": "Naro",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rocco Salvatore",
+          "lastName": "Calabrò",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-06T09:36:26Z",
+      "dateModified": "2026-04-06T09:36:26Z",
+      "uri": "http://zotero.org/users/19851393/items/DLB7JVI3",
+      "itemID": 71,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://www.mdpi.com/2077-0383/11/9/2543/pdf?version=1651739719",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T09:36:27Z",
+          "dateModified": "2026-04-06T09:36:27Z",
+          "uri": "http://zotero.org/users/19851393/items/9F54TLD4",
+          "path": "/Users/rami/Zotero/storage/9F54TLD4/Raciti et al. - 2022 - Improving Upper Extremity Bradykinesia in Parkinson’s Disease A Randomized Clinical Trial on the Us.pdf",
+          "select": "zotero://select/library/items/9F54TLD4"
+        }
+      ],
+      "notes": [],
+      "itemKey": "DLB7JVI3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/DLB7JVI3"
+    },
+    {
+      "key": "EUEDBPW7",
+      "version": 209,
+      "itemType": "journalArticle",
+      "title": "iTex Gloves: Design and In-Home Evaluation of an E-Textile Glove System for Tele-Assessment of Parkinson’s Disease",
+      "abstractNote": "Parkinson’s disease (PD) is a neurological progressive movement disorder, affecting more than 10 million people globally. PD demands a longitudinal assessment of symptoms to monitor the disease progression and manage the treatments. Existing assessment methods require patients with PD (PwPD) to visit a clinic every 3–6 months to perform movement assessments conducted by trained clinicians. However, periodic visits pose barriers as PwPDs have limited mobility, and healthcare cost increases. Hence, there is a strong demand for using telemedicine technologies for assessing PwPDs in remote settings. In this work, we present an in-home telemedicine kit, named iTex (intelligent Textile), which is a patient-centered design to carry out accessible tele-assessments of movement symptoms in people with PD. iTex is composed of a pair of smart textile gloves connected to a customized embedded tablet. iTex gloves are integrated with flex sensors on the fingers and inertial measurement unit (IMU) and have an onboard microcontroller unit with IoT (Internet of Things) capabilities including data storage and wireless communication. The gloves acquire the sensor data wirelessly to monitor various hand movements such as finger tapping, hand opening and closing, and other movement tasks. The gloves are connected to a customized tablet computer acting as an IoT device, configured to host a wireless access point, and host an MQTT broker and a time-series database server. The tablet also employs a patient-centered interface to guide PwPDs through the movement exam protocol. The system was deployed in four PwPDs who used iTex at home independently for a week. They performed the test independently before and after medication intake. Later, we performed data analysis of the in-home study and created a feature set. The study findings reported that the iTex gloves were capable to collect movement-related data and distinguish between pre-medication and post-medication cases in a majority of the participants. The IoT infrastructure demonstrated robust performance in home settings and offered minimum barriers for the assessment exams and the data communication with a remote server. In the post-study survey, all four participants expressed that the system was easy to use and poses a minimum barrier to performing the test independently. The present findings indicate that the iTex glove system has the potential for periodic and objective assessment of PD motor symptoms in remote settings.",
+      "date": "2023-03-07",
+      "DOI": "10.3390/s23062877",
+      "citationKey": "ravichandranITexGlovesDesign2023",
+      "url": "https://www.mdpi.com/1424-8220/23/6/2877",
+      "accessDate": "2026-03-24T17:39:31Z",
+      "shortTitle": "iTex Gloves",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "23",
+      "pages": "2877",
+      "publicationTitle": "Sensors",
+      "ISSN": "1424-8220",
+      "issue": "6",
+      "journalAbbreviation": "Sensors",
+      "creators": [
+        {
+          "firstName": "Vignesh",
+          "lastName": "Ravichandran",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shehjar",
+          "lastName": "Sadhu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniel",
+          "lastName": "Convey",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sebastien",
+          "lastName": "Guerrier",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shubham",
+          "lastName": "Chomal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Anne-Marie",
+          "lastName": "Dupre",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Umer",
+          "lastName": "Akbar",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dhaval",
+          "lastName": "Solanki",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kunal",
+          "lastName": "Mankodiya",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-24T17:39:31Z",
+      "dateModified": "2026-03-24T17:39:31Z",
+      "uri": "http://zotero.org/users/19851393/items/EUEDBPW7",
+      "itemID": 56,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://www.mdpi.com/1424-8220/23/6/2877/pdf?version=1678173185",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-24T17:39:32Z",
+          "dateModified": "2026-03-24T17:39:32Z",
+          "uri": "http://zotero.org/users/19851393/items/323H296W",
+          "path": "/Users/rami/Zotero/storage/323H296W/Ravichandran et al. - 2023 - iTex Gloves Design and In-Home Evaluation of an E-Textile Glove System for Tele-Assessment of Parki.pdf",
+          "select": "zotero://select/library/items/323H296W"
+        }
+      ],
+      "notes": [],
+      "itemKey": "EUEDBPW7",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/EUEDBPW7"
+    },
+    {
+      "key": "P7WSJP9L",
+      "version": 421,
+      "itemType": "journalArticle",
+      "title": "Music and Metronomes Differentially Impact Motor Timing in People with and without Parkinson’s Disease: Effects of Slow, Medium, and Fast Tempi on Entrainment and Synchronization Performances in Finger Tapping, Toe Tapping, and Stepping on the Spot Tasks",
+      "abstractNote": "Introduction\n              . Rhythmic auditory stimulation (RAS) has successfully helped regulate gait for people with Parkinson’s disease. However, the way in which different auditory cues and types of movements affect entrainment, synchronization, and pacing stability has not been directly compared in different aged people with and without Parkinson’s. Therefore, this study compared music and metronomes (cue types) in finger tapping, toe tapping, and stepping on the spot tasks to explore the potential of RAS training for general use.\n              Methods\n              . Participants (aged 18–78 years) included people with Parkinson’s (\n              n\n               = 30, Hoehn and Yahr mean = 1.78), older (\n              n\n               = 26), and younger adult controls (\n              n\n               = 36), as age may effect motor timing. Timed motor production was assessed using an extended\n              synchronization-continuation\n              task in cue type and movement conditions for slow, medium, and fast tempi (81, 116, and 140 mean beats per minute, respectively).\n              Results\n              . Analyses revealed main effects of cue and movement type but no between-group interactions, suggesting no differences in motor timing between people with Parkinson’s and controls. Music supported entrainment better than metronomes in medium and fast tempi, and stepping on the spot enabled better entrainment and less asynchrony, as well as more stable pacing compared to tapping in medium and fast tempi. Age was not confirmed as a factor, and no differences were observed in slow tempo.\n              Conclusion\n              . This is the first study to directly compare how different external auditory cues and movement types affect motor timing. The music and the stepping enabled participants to maintain entrainment once the external pacing cue ceased, suggesting endogenous mechanisms continued to regulate the movements. The superior performance of stepping on the spot suggests embodied entrainment can occur during continuous movement, and this may be related to emergent timing in tempi above 600 ms. These findings can be applied therapeutically to manage and improve adaptive behaviours for people with Parkinson’s.",
+      "date": "2019-08-18",
+      "DOI": "10.1155/2019/6530838",
+      "citationKey": "roseMusicMetronomesDifferentially2019",
+      "url": "https://www.hindawi.com/journals/pd/2019/6530838/",
+      "accessDate": "2026-04-06T18:27:14Z",
+      "shortTitle": "Music and Metronomes Differentially Impact Motor Timing in People with and without Parkinson’s Disease",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "volume": "2019",
+      "pages": "1-18",
+      "publicationTitle": "Parkinson's Disease",
+      "ISSN": "2090-8083, 2042-0080",
+      "journalAbbreviation": "Parkinson's Disease",
+      "creators": [
+        {
+          "firstName": "Dawn",
+          "lastName": "Rose",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yvonne",
+          "lastName": "Delevoye-Turrell",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Laurent",
+          "lastName": "Ott",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lucy E.",
+          "lastName": "Annett",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Peter J.",
+          "lastName": "Lovatt",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-06T18:27:14Z",
+      "dateModified": "2026-04-06T18:27:14Z",
+      "uri": "http://zotero.org/users/19851393/items/P7WSJP9L",
+      "itemID": 83,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1155/2019/6530838",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T18:27:20Z",
+          "dateModified": "2026-04-06T18:27:20Z",
+          "uri": "http://zotero.org/users/19851393/items/9P9BRYUK",
+          "path": "/Users/rami/Zotero/storage/9P9BRYUK/Rose et al. - 2019 - Music and Metronomes Differentially Impact Motor Timing in People with and without Parkinson’s Disea.pdf",
+          "select": "zotero://select/library/items/9P9BRYUK"
+        }
+      ],
+      "notes": [],
+      "itemKey": "P7WSJP9L",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/P7WSJP9L"
+    },
+    {
+      "key": "K7M39S88",
+      "version": 525,
+      "itemType": "journalArticle",
+      "title": "Verification of Finger Joint Stiffness Estimation Method With Soft Robotic Actuator",
+      "abstractNote": "Stroke has been the leading cause of disability due to the induced spasticity in the upper extremity. The constant flexion of spastic fingers following stroke has not been well described. Accurate measurements for joint stiffness help clinicians have a better access to the level of impairment after stroke. Previously, we conducted a method for quantifying the passive finger joint stiffness based on the pressure-angle relationship between the spastic fingers and the soft-elastic composite actuator (SECA). However, it lacks a ground-truth to demonstrate the compatibility between the SECA-facilitated stiffness estimation and standard joint stiffness quantification procedure. In this study, we compare the passive metacarpophalangeal (MCP) joint stiffness measured using the SECA with the results from our designed standalone mechatronics device, which measures the passive metacarpophalangeal joint torque and angle during passive finger rotation. Results obtained from the fitting model that concludes the stiffness characteristic are further compared with the results obtained from SECA-Finger model, as well as the clinical score of Modified Ashworth Scale (MAS) for grading spasticity. These findings suggest the possibility of passive MCP joint stiffness quantification using the soft robotic actuator during the performance of different tasks in hand rehabilitation.",
+      "date": "2020-12-18",
+      "DOI": "10.3389/fbioe.2020.592637",
+      "citationKey": "shiVerificationFingerJoint2020",
+      "url": "https://www.frontiersin.org/articles/10.3389/fbioe.2020.592637/full",
+      "accessDate": "2026-04-17T08:25:04Z",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "8",
+      "pages": "592637",
+      "publicationTitle": "Frontiers in Bioengineering and Biotechnology",
+      "ISSN": "2296-4185",
+      "journalAbbreviation": "Front. Bioeng. Biotechnol.",
+      "creators": [
+        {
+          "firstName": "Xiang Qian",
+          "lastName": "Shi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ho Lam",
+          "lastName": "Heung",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhi Qiang",
+          "lastName": "Tang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kai Yu",
+          "lastName": "Tong",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zheng",
+          "lastName": "Li",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-17T08:25:04Z",
+      "dateModified": "2026-04-17T08:25:04Z",
+      "uri": "http://zotero.org/users/19851393/items/K7M39S88",
+      "itemID": 91,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://www.frontiersin.org/articles/10.3389/fbioe.2020.592637/pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-17T08:25:06Z",
+          "dateModified": "2026-04-17T08:25:06Z",
+          "uri": "http://zotero.org/users/19851393/items/DLC35B95",
+          "path": "/Users/rami/Zotero/storage/DLC35B95/Shi et al. - 2020 - Verification of Finger Joint Stiffness Estimation Method With Soft Robotic Actuator.pdf",
+          "select": "zotero://select/library/items/DLC35B95"
+        }
+      ],
+      "notes": [],
+      "itemKey": "K7M39S88",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/K7M39S88"
+    },
+    {
+      "key": "5EL93XHM",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "Design and Validation of a Self-Aligning Index Finger Exoskeleton for Post-Stroke Rehabilitation",
+      "date": "2021",
+      "DOI": "10.1109/TNSRE.2021.3097888",
+      "citationKey": "sunDesignValidationSelfAligning2021",
+      "url": "https://ieeexplore.ieee.org/document/9489286/",
+      "accessDate": "2026-03-23T21:21:34Z",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "rights": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "volume": "29",
+      "pages": "1513-1523",
+      "publicationTitle": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+      "ISSN": "1534-4320, 1558-0210",
+      "journalAbbreviation": "IEEE Trans. Neural Syst. Rehabil. Eng.",
+      "creators": [
+        {
+          "firstName": "Ning",
+          "lastName": "Sun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Guotao",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Long",
+          "lastName": "Cheng",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-23T21:21:34Z",
+      "dateModified": "2026-03-23T21:21:34Z",
+      "uri": "http://zotero.org/users/19851393/items/5EL93XHM",
+      "itemID": 49,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://ieeexplore.ieee.org/ielx7/7333/9363468/09489286.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-23T21:21:41Z",
+          "dateModified": "2026-03-23T21:21:41Z",
+          "uri": "http://zotero.org/users/19851393/items/H8L6G2I9",
+          "path": "/Users/rami/Zotero/storage/H8L6G2I9/Sun et al. - 2021 - Design and Validation of a Self-Aligning Index Finger Exoskeleton for Post-Stroke Rehabilitation.pdf",
+          "select": "zotero://select/library/items/H8L6G2I9"
+        }
+      ],
+      "notes": [],
+      "itemKey": "5EL93XHM",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/5EL93XHM"
+    },
+    {
+      "key": "MYYMFLDA",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "A hand exoskeleton with linear motors (HELM) for pathological tremor suppression of fingers",
+      "date": "04/2025",
+      "DOI": "10.1016/j.ish.2025.03.002",
+      "citationKey": "yiHandExoskeletonLinear2025",
+      "url": "https://linkinghub.elsevier.com/retrieve/pii/S3050544525000179",
+      "accessDate": "2026-03-23T21:44:14Z",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "volume": "1",
+      "pages": "86-97",
+      "publicationTitle": "Intelligent Sports and Health",
+      "ISSN": "30505445",
+      "issue": "2",
+      "journalAbbreviation": "Intelligent Sports and Health",
+      "creators": [
+        {
+          "firstName": "Andong",
+          "lastName": "Yi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bin",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nathan",
+          "lastName": "Lau",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dingguo",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-23T21:44:14Z",
+      "dateModified": "2026-03-23T21:44:14Z",
+      "uri": "http://zotero.org/users/19851393/items/MYYMFLDA",
+      "itemID": 51,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-25T22:35:21Z",
+          "dateModified": "2026-03-25T22:35:21Z",
+          "uri": "http://zotero.org/users/19851393/items/QYWC3BU6",
+          "path": "/Users/rami/Zotero/storage/QYWC3BU6/Yi et al. - 2025 - A hand exoskeleton with linear motors (HELM) for pathological tremor suppression of fingers.pdf",
+          "select": "zotero://select/library/items/QYWC3BU6"
+        }
+      ],
+      "notes": [],
+      "itemKey": "MYYMFLDA",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/MYYMFLDA"
+    },
+    {
+      "key": "JK7DT9RK",
+      "version": 437,
+      "itemType": "journalArticle",
+      "title": "Interpretable and granular video-based quantification of motor characteristics from the finger-tapping test in Parkinson’s disease",
+      "abstractNote": "Abstract\n            \n              Accurately quantifying motor characteristics in Parkinson’s disease is crucial for monitoring disease progression and optimizing treatment strategies. The finger-tapping test is a standard motor assessment. Clinicians visually evaluate a patient’s tapping performance and assign an overall severity score based on tapping amplitude, speed, and irregularity. Simultaneous video recording during the standard test enables a more objective, continuous quantification of detailed motor characteristics, thereby reducing the subjectivity and inter-rater variability inherent in clinical evaluations. This paper introduces a computer vision-based method for quantifying granular PD motor characteristics from video recordings. Four sets of clinically relevant features are proposed to characterize\n              hypokinesia\n              ,\n              bradykinesia\n              ,\n              sequence effect\n              , and\n              hesitation-halts\n              . We evaluate our approach on video recordings and clinical evaluations of 446 people with PD from the Personalized Parkinson Project. Using principal component analysis with varimax rotation, we show that the extracted features largely align with the four clinically defined motor deficits, while additionally revealing finer-grained substructures within the\n              sequence effect\n              and\n              hesitation-halts\n              domains. In addition, we have used these features to train machine learning classifiers to estimate the Movement Disorder Society Unified Parkinson’s Disease Rating Scale (MDS-UPDRS) finger-tapping severity score. Compared to state-of-the-art approaches, our method achieves a higher accuracy in MDS-UPDRS score prediction, while still providing an interpretable quantification of individual finger-tapping motor characteristics. In addition, we present the first large-scale dataset of finger-tapping, comprising 4073 video recordings. In summary, the proposed framework provides a practical solution for the objective assessment of PD motor characteristics, that can potentially be applied in both clinical and remote settings. Future work is needed to assess its responsiveness to symptomatic treatment and disease progression.",
+      "date": "2026-03-08",
+      "DOI": "10.1038/s41531-026-01307-w",
+      "citationKey": "zarratehsanInterpretableGranularVideobased2026",
+      "url": "https://www.nature.com/articles/s41531-026-01307-w",
+      "accessDate": "2026-03-24T17:53:01Z",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "publicationTitle": "npj Parkinson's Disease",
+      "ISSN": "2373-8057",
+      "journalAbbreviation": "npj Parkinsons Dis.",
+      "creators": [
+        {
+          "firstName": "Tahereh",
+          "lastName": "Zarrat Ehsan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Tangermann",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yağmur",
+          "lastName": "Güçlütürk",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "SooYoon",
+          "lastName": "Shin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "King Chung",
+          "lastName": "Ho",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bastiaan R.",
+          "lastName": "Bloem",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luc J. W.",
+          "lastName": "Evers",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-03-24T17:53:01Z",
+      "dateModified": "2026-03-24T17:53:01Z",
+      "uri": "http://zotero.org/users/19851393/items/JK7DT9RK",
+      "itemID": 58,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://www.nature.com/articles/s41531-026-01307-w_reference.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-03-24T17:53:03Z",
+          "dateModified": "2026-03-24T17:53:03Z",
+          "uri": "http://zotero.org/users/19851393/items/Y88QVSBU",
+          "path": "/Users/rami/Zotero/storage/Y88QVSBU/Zarrat Ehsan et al. - 2026 - Interpretable and granular video-based quantification of motor characteristics from the finger-tappi.pdf",
+          "select": "zotero://select/library/items/Y88QVSBU"
+        }
+      ],
+      "notes": [],
+      "itemKey": "JK7DT9RK",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JK7DT9RK"
+    },
+    {
+      "key": "DE6B5G6V",
+      "version": 357,
+      "itemType": "journalArticle",
+      "title": "Effects of wearable visual cueing on gait pattern and stability in patients with Parkinson's disease",
+      "abstractNote": "The present study examined the effects of wearable visual cues, provided by a wearable laser device, on the gait pattern and stability in patients with Parkinson's disease (PD). In total, 18 patients with a clinical diagnosis of idiopathic PD (Hoehn and Yahr stage II-III) and 18 healthy controls were included. The main outcome measures included spatiotemporal parameters, sagittal plane kinematic parameters of joints in lower limbs, and dynamic center of pressure (COP) parameters. Significant intra-group improvement in gait parameters was observed in PD patients. Compared with that at baseline, the gait pattern improved in PD patients under the cued condition, with longer stride length and higher toe clearance, as well as shortening of double stance phase, especially the stride length, double stance phase and toe clearance were not significantly different between cued condition and healthy control groups. In kinematics, the ankle peak dorsiflexion in swing phase and the hip range of motion (ROM) in gait cycle was significantly improved in PD patients with visual cues and close to healthy controls. Decreased anteroposterior (AP) position of COP improved gait stability in patients with PD under the cued condition. Multiple linear regression analysis showed that the AP position has a negative correlation with ankle peak dorsiflexion in swing phase. Pearson's correlation coefficients showed that the minimum toe clearance (Mini TC) was positively correlated with the ankle peak dorsiflexion in swing phase. The immediate effect of wearable visual cues improved the gait pattern and stability in PD patients, suggesting that it may be effective when applied as an alternative technique in rehabilitation training for PD patients.",
+      "date": "2023",
+      "DOI": "10.3389/fneur.2023.1077871",
+      "citationKey": "zhangEffectsWearableVisual2023",
+      "language": "eng",
+      "libraryCatalog": "PubMed",
+      "volume": "14",
+      "pages": "1077871",
+      "publicationTitle": "Frontiers in Neurology",
+      "ISSN": "1664-2295",
+      "journalAbbreviation": "Front Neurol",
+      "PMID": "37064198",
+      "PMCID": "PMC10091618",
+      "creators": [
+        {
+          "firstName": "Wei",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yun",
+          "lastName": "Han",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuanyuan",
+          "lastName": "Shi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shilei",
+          "lastName": "Yan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wenjing",
+          "lastName": "Song",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Guiyun",
+          "lastName": "Cui",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jie",
+          "lastName": "Xiang",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "gait pattern",
+          "type": 1
+        },
+        {
+          "tag": "neurorehabilitation",
+          "type": 1
+        },
+        {
+          "tag": "Parkinson ‘s disease",
+          "type": 1
+        },
+        {
+          "tag": "stability",
+          "type": 1
+        },
+        {
+          "tag": "wearable visual cueing",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2026-04-06T10:10:42Z",
+      "dateModified": "2026-04-06T10:10:42Z",
+      "uri": "http://zotero.org/users/19851393/items/DE6B5G6V",
+      "itemID": 74,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "url": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1077871/pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T10:10:43Z",
+          "dateModified": "2026-04-06T10:10:43Z",
+          "uri": "http://zotero.org/users/19851393/items/G6GELYAH",
+          "path": "/Users/rami/Zotero/storage/G6GELYAH/Zhang et al. - 2023 - Effects of wearable visual cueing on gait pattern and stability in patients with Parkinson's disease.pdf",
+          "select": "zotero://select/library/items/G6GELYAH"
+        },
+        {
+          "itemType": "attachment",
+          "title": "PubMed entry",
+          "url": "http://www.ncbi.nlm.nih.gov/pubmed/37064198",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2026-04-06T10:10:42Z",
+          "dateModified": "2026-04-06T10:10:42Z",
+          "uri": "http://zotero.org/users/19851393/items/UV49JKUN",
+          "select": "zotero://select/library/items/UV49JKUN"
+        }
+      ],
+      "notes": [],
+      "itemKey": "DE6B5G6V",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/DE6B5G6V"
+    },
+    {
+      "key": "KLVFLZAF",
+      "version": 354,
+      "itemType": "standard",
+      "title": "Exo-Glove Shell  A Hybrid Rigid-Soft Wearable Robot for  Thumb Opposition, with an Under-Actuated Tendon-Driven System",
+      "citationKey": "zotero-item-73",
+      "url": "https://sites.google.com/view/exo-gloveshell/",
+      "creators": [
+        {
+          "firstName": "et.all",
+          "lastName": "Kim",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2026-04-06T10:01:03Z",
+      "dateModified": "2026-04-06T10:02:41Z",
+      "uri": "http://zotero.org/users/19851393/items/KLVFLZAF",
+      "itemID": 73,
+      "attachments": [],
+      "notes": [],
+      "itemKey": "KLVFLZAF",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KLVFLZAF"
+    }
+  ]
+}

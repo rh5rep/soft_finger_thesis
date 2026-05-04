@@ -1,0 +1,59 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.obsidian/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated reports and caches
+reports/
+
+# Binary exports handled outside git
+*.pdf
+*.zip
+*.csv.bak
+*.pptx
+
+# Generated simulation outputs
+simulation_modeling/results/*history.csv
+simulation_modeling/results/.DS_Store
+simulation_modeling/results/candidate_run_images/.DS_Store
+simulation_modeling/.vscode/
+
+# Temporary Office files
+docs/~$*.pptx
+docs/presentation_assets/
+docs/portfolio_assets/
+
+# Personal scratch files at repo root
+/Pasted Image*
+/Pasted image*
+/Meeting Prep*.md
+/Meeting with Sævar*.md
+/Rmai jeep in mind.md
+/Untitled*.md
+/Could become the main near-adjacent hardware precedent for the presentation.
+/raciti2022.txt
+/raciti2025.txt
+/raciti2025_page-*.png
+/s242507___Thesis.pdf
+/s242507-gantt.png
+
+# Local-only folders
+/Design/
+/GM Interview/
+/Users/
+/Example Project Plans/
