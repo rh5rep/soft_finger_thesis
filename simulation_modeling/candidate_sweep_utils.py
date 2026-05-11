@@ -24,16 +24,39 @@ class ModelParams:
     geom: v01_model.FingerGeometry
     joint_rest: tuple[float, float, float]
     stiffness: tuple[float, float, float]
+    abstraction_name: str = "joint_space"
 
 
 @dataclass(frozen=True)
-class CandidateGeometry:
+class SharedRoutingGeometry:
+    entry_body: str
+    entry_local: tuple[float, float]
+    splitter_body: str | None
+    splitter_local: tuple[float, float] | None
+
+
+@dataclass(frozen=True)
+class BranchGeometry:
+    """
+    Branch-local routing description.
+
+    `guide_longs` and `distal_anchor_long` are normalized longitudinal
+    coordinates along the corresponding body segment, not absolute mm values.
+    `guide_offsets` and `distal_anchor_offset` remain local perpendicular
+    offsets in mm.
+    """
     guide_bodies: tuple[str, ...]
     guide_longs: tuple[float, ...]
     guide_offsets: tuple[float, ...]
     distal_anchor_long: float
     distal_anchor_offset: float
-    tendon_entry: tuple[float, float]
+
+
+@dataclass(frozen=True)
+class CandidateGeometry:
+    family: str
+    shared: SharedRoutingGeometry
+    branches: tuple[BranchGeometry, ...]
 
 
 @dataclass(frozen=True)
@@ -59,7 +82,11 @@ class RejectLimits:
 
 @dataclass(frozen=True)
 class CandidateSweepOutput:
+    abstraction_name: str
     model_case_name: str
+    size_name: str
+    stiffness_name: str
+    candidate_family: str
     candidate_name: str
     sweep_name: str
     q_sweep: np.ndarray
@@ -76,7 +103,11 @@ class CandidateSweepOutput:
 
 @dataclass(frozen=True)
 class CandidateResult:
+    abstraction_name: str
     model_case_name: str
+    size_name: str
+    stiffness_name: str
+    candidate_family: str
     candidate_name: str
     sweep_name: str
     peak_tension: float
@@ -169,114 +200,213 @@ def make_candidate_name(
     )
 
 
-def generate_two_guide_candidates(
-    prox_long_values: list[float],
-    mid_long_values: list[float],
-    offset_values: list[float],
-    distal_anchor_long_values: list[float],
-    distal_anchor_offset_values: list[float],
-    tendon_entry_values: list[tuple[float, float]],
-) -> list[CandidateSpec]:
-    candidates = []
+def make_branch(
+    guide_bodies: tuple[str, ...],
+    guide_longs: tuple[float, ...],
+    guide_offsets: tuple[float, ...],
+    distal_anchor_long: float,
+    distal_anchor_offset: float,
+) -> BranchGeometry:
+    # Longitudinal positions are normalized by body length; offsets stay in mm.
+    assert len(guide_bodies) == len(guide_longs) == len(guide_offsets), \
+    "guide_bodies, guide_longs, and guide_offsets must have the same length"
 
-    for (
-        prox_long,
-        mid_long,
-        offset,
-        anchor_long,
-        anchor_offset,
-        tendon_entry,
-    ) in product(
-        prox_long_values,
-        mid_long_values,
-        offset_values,
-        distal_anchor_long_values,
-        distal_anchor_offset_values,
-        tendon_entry_values,
-    ):
-        geometry = CandidateGeometry(
-            guide_bodies=("proximal", "middle"),
-            guide_longs=(prox_long, mid_long),
-            guide_offsets=(offset, offset),
-            distal_anchor_long=anchor_long,
-            distal_anchor_offset=anchor_offset,
-            tendon_entry=tendon_entry,
-        )
+    valid_bodies = {"proximal", "middle", "distal", "world"}
+    assert all(body in valid_bodies for body in guide_bodies), \
+        f"guide_bodies must contain only valid body names: {valid_bodies}"
+    return BranchGeometry(
+    guide_bodies=guide_bodies,
+    guide_longs=guide_longs,
+    guide_offsets=guide_offsets,
+    distal_anchor_long=distal_anchor_long,
+    distal_anchor_offset=distal_anchor_offset,
+    )
 
-        name = make_candidate_name(
-            family="twoG",
-            guide_bodies=geometry.guide_bodies,
-            guide_longs=geometry.guide_longs,
-            guide_offsets=geometry.guide_offsets,
-            distal_anchor_long=geometry.distal_anchor_long,
-            distal_anchor_offset=geometry.distal_anchor_offset,
-            tendon_entry=geometry.tendon_entry,
-        )
 
-        candidates.append(CandidateSpec(name=name, geometry=geometry))
+def validate_branch_geom(branch: BranchGeometry) -> bool:
+    
+    for long in branch.guide_longs:
+        if long >= 1 or long <=0:
+            return False
+    
+    if branch.distal_anchor_long <= 0 or branch.distal_anchor_long >= 1:
+        return False
+    
+    return True
 
-    return candidates
+def validate_shared_geom(shared: SharedRoutingGeometry) -> bool:
+    valid_bodies = {"world", "proximal", "middle", "distal"}
+
+    if shared.entry_body not in valid_bodies:
+        return False
+
+    if (shared.splitter_body is None) != (shared.splitter_local is None):
+        return False
+
+    if shared.splitter_body is not None and shared.splitter_body not in valid_bodies:
+        return False
+
+    return True
+
+def validate_candidate_geom(candidate: CandidateSpec) -> bool:
+    if not validate_shared_geom(candidate.geometry.shared):
+        return False
+
+    if len(candidate.geometry.branches) == 0:
+        return False
+
+    for branch in candidate.geometry.branches:
+        if not validate_branch_geom(branch):
+            return False
+
+    return True    
+
+def make_candidate(
+        family: str,
+        shared: SharedRoutingGeometry,
+        branches: tuple[BranchGeometry, ...],
+        name: str,
+) -> CandidateSpec:
+    assert len(branches) > 0, \
+    "branches must not be empty"
+
+    return CandidateSpec(name, CandidateGeometry(family, shared, branches))
 
 
 def make_tendon_input(candidate: CandidateSpec, model: ModelParams) -> v01_model.TendonInput:
     geom = model.geom
-    cg = candidate.geometry
-
+    c_geom = candidate.geometry 
+    sg = c_geom.shared
+    
     body_lengths = {
         "proximal": geom.l1,
         "middle": geom.l2,
         "distal": geom.l3,
     }
 
-    elements: list[v01_model.RoutingElement] = []
+    branches = [] 
 
-    # First-pass assumption: tendon entry is a fixed world point upstream of the MCP.
-    elements.append(
-        v01_model.RoutingElement(
-            name="entry",
-            body="world",
-            kind="entry",
-            local=np.array(cg.tendon_entry, dtype=float),
-        )
-    )
+    assert ((sg.splitter_body is None) == (sg.splitter_local is None)), "splitter_body and splitter_local must be both set or both None"
 
-    for i, (body, u, offset) in enumerate(
-        zip(cg.guide_bodies, cg.guide_longs, cg.guide_offsets, strict=True)
-    ):
+
+    for branch_idx, bg in enumerate(c_geom.branches):
+        elements = [] 
+
         elements.append(
             v01_model.RoutingElement(
-                name=f"{body}_guide_{i}",
-                body=body,
-                kind="guide",
-                local=np.array([u * body_lengths[body], offset], dtype=float),
+                name="entry",
+                body=sg.entry_body, 
+                kind="entry",
+                local=np.array(sg.entry_local, dtype=float),
+            )
+        )
+                
+        if sg.splitter_body is not None and sg.splitter_local is not None:
+            elements.append(
+            v01_model.RoutingElement(
+                name="splitter",
+                body=sg.splitter_body, 
+                kind="splitter",
+                local=np.array(sg.splitter_local, dtype=float),
+            )
+            )
+
+
+        for i, (body, u, offset) in enumerate(
+            zip(bg.guide_bodies, bg.guide_longs, bg.guide_offsets, strict=True)
+        ):
+            elements.append(
+                v01_model.RoutingElement(
+                    name=f"{body}_guide_{i}",
+                    body=body,
+                    kind="guide",
+                    # `u` is a normalized fraction of the local body length.
+                    local=np.array([u * body_lengths[body], offset], dtype=float),
+                )
+            )
+        
+
+
+        elements.append(
+            v01_model.RoutingElement(
+                name="distal_anchor",
+                body="distal",
+                kind="anchor",
+                local=np.array(
+                    # Distal anchor longitudinal position is also normalized.
+                    [bg.distal_anchor_long * geom.l3, bg.distal_anchor_offset],
+                    dtype=float,
+                ),
             )
         )
 
-    elements.append(
-        v01_model.RoutingElement(
-            name="distal_anchor",
-            body="distal",
-            kind="anchor",
-            local=np.array(
-                [cg.distal_anchor_long * geom.l3, cg.distal_anchor_offset],
-                dtype=float,
-            ),
+        branch = v01_model.RoutingPath(
+            name=f"{c_geom.family}_branch_{branch_idx}", 
+            elements=tuple(elements),
         )
-    )
 
-    branch = v01_model.RoutingPath(
-        name=f"{candidate.name}_branch",
-        elements=tuple(elements),
-    )
+        branches.append(branch)
 
-    # Current family is single-branch. A later two-branch family can build two
-    # RoutingPath objects and return them under one TendonInput.
     return v01_model.TendonInput(
-        name=candidate.name,
-        branches=(branch,),
+        name=candidate.name,  
+        branches=tuple(branches), 
     )
 
 
+def generate_two_guide_family(
+        family: str,
+        shared: SharedRoutingGeometry,
+        guide_bodies: tuple[str, str],
+        guide_long_sets: tuple[tuple[float, float], ...],
+        guide_offset_sets: tuple[tuple[float, float], ...],
+        distal_anchor_longs: tuple[float, ...],
+        distal_anchor_offsets: tuple[float, ...],
+) -> list[CandidateSpec]:
+    
+    candidates = []
+
+    for guide_longs, guide_offsets, distal_anchor_long, distal_anchor_offset in product(
+        guide_long_sets,
+        guide_offset_sets,
+        distal_anchor_longs,
+        distal_anchor_offsets,
+    ):
+        branch = make_branch(
+            guide_bodies=guide_bodies,
+            guide_longs=guide_longs,
+            guide_offsets=guide_offsets,
+            distal_anchor_long=distal_anchor_long,
+            distal_anchor_offset=distal_anchor_offset,
+        )
+
+        if not validate_branch_geom(branch):
+            continue
+
+        name = make_candidate_name(
+            family=family,
+            guide_bodies=guide_bodies,
+            guide_longs=guide_longs,
+            guide_offsets=guide_offsets,
+            distal_anchor_long=distal_anchor_long,
+            distal_anchor_offset=distal_anchor_offset,
+            tendon_entry=shared.entry_local,
+        )
+
+        candidate = make_candidate(
+            family=family,
+            shared=shared,
+            branches=(branch,),
+            name=name,
+        )
+
+        if not validate_candidate_geom(candidate):
+            continue
+
+        candidates.append(candidate)
+
+    return candidates
+
+    
 def compute_tau_error_relative(
     tau_error: np.ndarray,
     tau_req: np.ndarray,
@@ -341,7 +471,11 @@ def evaluate_candidate_over_sweep(
     tau_error_arr = np.asarray(tau_error, dtype=float)
 
     return CandidateSweepOutput(
+        abstraction_name=model.abstraction_name,
         model_case_name=model.name,
+        size_name=model.size_name,
+        stiffness_name=model.stiffness_name,
+        candidate_family=candidate.geometry.family,
         candidate_name=candidate.name,
         sweep_name=sweep.name,
         q_sweep=q_sweep,
@@ -401,7 +535,11 @@ def summarize_candidate_output(
         )
 
     return CandidateResult(
+        abstraction_name=output.abstraction_name,
         model_case_name=output.model_case_name,
+        size_name=output.size_name,
+        stiffness_name=output.stiffness_name,
+        candidate_family=output.candidate_family,
         candidate_name=output.candidate_name,
         sweep_name=output.sweep_name,
         peak_tension=peak_tension,
@@ -424,7 +562,11 @@ def raw_rows_from_output(output: CandidateSweepOutput) -> list[dict[str, float |
 
     for idx, q in enumerate(output.q_sweep):
         row = {
+            "abstraction_name": output.abstraction_name,
             "model_case_name": output.model_case_name,
+            "size_name": output.size_name,
+            "stiffness_name": output.stiffness_name,
+            "candidate_family": output.candidate_family,
             "candidate_name": output.candidate_name,
             "sweep_name": output.sweep_name,
             "posture_idx": idx,
@@ -465,7 +607,11 @@ def raw_rows_from_output(output: CandidateSweepOutput) -> list[dict[str, float |
 
 def summary_row_from_result(result: CandidateResult) -> dict[str, float | str | bool]:
     return {
+        "abstraction_name": result.abstraction_name,
         "model_case_name": result.model_case_name,
+        "size_name": result.size_name,
+        "stiffness_name": result.stiffness_name,
+        "candidate_family": result.candidate_family,
         "candidate_name": result.candidate_name,
         "sweep_name": result.sweep_name,
         "peak_tension": result.peak_tension,
