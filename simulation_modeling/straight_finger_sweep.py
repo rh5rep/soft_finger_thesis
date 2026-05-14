@@ -6,19 +6,9 @@ import numpy as np
 
 from simulation_modeling import straight_finger_model
 from simulation_modeling.candidate_sweep_utils import (
-    SharedRoutingGeometry,
-    BranchGeometry,
-    CandidateGeometry,
     CandidateSpec,
     RejectLimits,
     ScoreWeights,
-    ExperimentRun,
-    make_branch,
-    make_candidate,
-    make_candidate_name,
-    validate_branch_geom,
-    validate_shared_geom,
-    validate_candidate_geom,
 )
 
 
@@ -130,7 +120,7 @@ def moment_arm_per_branch(
         tendon: straight_finger_model.StraightTendonInput,
         theta: float,
         eps: float = 1e-6,
-) -> dict[str, np.ndarray]:
+) -> dict[str, float]:
     
     return {
         branch.name: straight_finger_model.moment_arm(branch, theta, eps=eps)
@@ -149,7 +139,7 @@ def branch_pull_at_theta(
     tendon: straight_finger_model.StraightTendonInput,
     theta: float,
     theta_ref: float,
-) -> dict[str, float]:
+) -> dict[str, np.ndarray]:
     return {
         branch.name: straight_finger_model.tendon_excursion(branch, theta, theta_ref)
         for branch in tendon.branches
@@ -221,11 +211,129 @@ def evaluate_candidate_over_sweep_straight_finger(candidate: CandidateSpec,
         candidate_family=candidate.geometry.family,
         candidate_name=candidate.name,
         sweep_name=sweep.name,
-        theta_sweep=np.asarray([[theta] for theta in theta_sweep]),
-        tip_traj=np.asarray(tip_traj),  
-        tau_req=np.asarray([[tau] for tau in tau_req]),  
-        tension_req=np.asarray([[t] for t in tension_req]),  
-        r_total=np.asarray([[r] for r in r_total]), 
+        theta_sweep=np.asarray(theta_sweep, dtype=float),
+        tau_req=np.asarray(tau_req, dtype=float),
+        tip_traj=np.asarray(tip_traj, dtype=float),
+        tension_req=np.asarray(tension_req, dtype=float),
+        r_total=np.asarray(r_total, dtype=float),
         branch_pull={k: np.asarray(v) for k, v in branch_pull.items()},
         branch_imbalance=np.asarray(branch_imbalance),
     )
+
+
+def vector_norm_rows(values: np.ndarray) -> np.ndarray:
+    return np.linalg.norm(values)
+
+def branch_peak_pull(branch_pull: dict[str, np.ndarray]) -> float:
+    return max(float(np.max(np.abs(values))) for values in branch_pull.values())
+
+def summarize_candidate_output_straight(
+        output: CandidateSweepOutput,
+        reject_limits: RejectLimits,
+        score_weights: ScoreWeights,
+) -> CandidateResult:
+    
+    peak_tension = float(np.max(output.tension_req))
+    mean_tension = float(np.mean(output.tension_req))
+    peak_pull = float(branch_peak_pull(output.branch_pull))
+    peak_branch_imbalance = float(np.max(output.branch_imbalance))
+    r_total_norm = vector_norm_rows(output.r_total)
+
+    reject_reasons: list[str] = []
+
+    if peak_tension > reject_limits.max_tension:
+        reject_reasons.append("peak_tension")
+
+    if peak_pull > reject_limits.max_pull:
+        reject_reasons.append("peak_pull")
+
+    if float(np.min(r_total_norm)) < reject_limits.min_moment_arm_norm:
+        reject_reasons.append("moment_arm_too_small")
+
+
+    rejected = len(reject_reasons) > 0
+
+    smoothness_penalty = (np.mean(vector_norm_rows(np.diff(output.r_total, axis=0)))) if len(output.r_total) > 1 else 0.0
+
+
+    score = None
+    if not rejected:
+        score = (
+            score_weights.w_tension * (peak_tension / max(reject_limits.max_tension, 1e-9))
+            + score_weights.w_pull * (peak_pull / max(reject_limits.max_pull, 1e-9))
+            + score_weights.w_balance * (peak_branch_imbalance / max(reject_limits.max_branch_imbalance, 1e-9))
+            + score_weights.w_smoothness * smoothness_penalty
+        )
+
+    return CandidateResult(
+    abstraction_name=output.abstraction_name,
+    model_case_name=output.model_case_name,
+    size_name=output.size_name,
+    stiffness_name=output.stiffness_name,
+    candidate_family=output.candidate_family,
+    candidate_name=output.candidate_name,
+    sweep_name=output.sweep_name,
+    peak_tension=peak_tension,
+    mean_tension=mean_tension,
+    peak_pull=peak_pull,
+    peak_branch_imbalance=peak_branch_imbalance,
+    score=score,
+    rejected=rejected,
+    reject_reasons=reject_reasons,
+    )
+
+
+
+def raw_rows_from_output_straight(output: CandidateSweepOutput) -> list[dict[str, float | str | int]]:
+    rows = []
+    branch_names = list(output.branch_pull.keys())
+
+    for idx, theta in enumerate(output.theta_sweep):
+        row = {
+            "abstraction_name": output.abstraction_name,
+            "model_case_name": output.model_case_name,
+            "size_name": output.size_name,
+            "stiffness_name": output.stiffness_name,
+            "candidate_family": output.candidate_family,
+            "candidate_name": output.candidate_name,
+            "sweep_name": output.sweep_name,
+            "posture_idx": idx,
+            "q_mcp": float(theta),
+            "tip_x": float(output.tip_traj[idx, 0]),
+            "tip_y": float(output.tip_traj[idx, 1]),
+            "T_req": float(output.tension_req[idx]),
+            "tau_req_mcp": float(output.tau_req[idx]),
+            "r_total_mcp_mm": float(output.r_total[idx]),
+            "branch_imbalance": float(output.branch_imbalance[idx]),
+        }
+
+        for branch_idx, branch_name in enumerate(branch_names):
+            row[f"branch_{branch_idx}_name"] = branch_name
+            row[f"branch_{branch_idx}_pull_mm"] = float(output.branch_pull[branch_name][idx])
+
+        rows.append(row)
+
+    return rows
+
+
+
+
+def summary_row_from_result(result: CandidateResult) -> dict[str, float | str | bool]:
+    return {
+        "abstraction_name": result.abstraction_name,
+        "model_case_name": result.model_case_name,
+        "size_name": result.size_name,
+        "stiffness_name": result.stiffness_name,
+        "candidate_family": result.candidate_family,
+        "candidate_name": result.candidate_name,
+        "sweep_name": result.sweep_name,
+        "peak_tension": result.peak_tension,
+        "mean_tension": result.mean_tension,
+        "peak_pull_mm": result.peak_pull,
+        "peak_branch_imbalance_mm": result.peak_branch_imbalance,
+        "score": result.score,
+        "rejected": result.rejected,
+        "reject_reasons": "|".join(result.reject_reasons),
+    }
+
+

@@ -1,11 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
 from itertools import product
 from pathlib import Path
-import csv
-import re
 
 import numpy as np
 
@@ -440,19 +437,6 @@ def branch_peak_pull(branch_pull: dict[str, np.ndarray]) -> float:
     return max(float(np.max(np.abs(values))) for values in branch_pull.values())
 
 
-def evaluate_candidate_over_sweep(
-   candidate: CandidateSpec,
-    model: ModelParams,
-    sweep: SweepSpec,
-) -> CandidateSweepOutput:
-    
-    if model.abstraction_name == "straight_finger":
-        from simulation_modeling import straight_finger_sweep
-        return straight_finger_sweep.evaluate_candidate_over_sweep_straight_finger(candidate, model, sweep)
-    
-    elif model.abstraction_name == "joint_space":
-        return evaluate_candidate_over_sweep_joint_space(candidate, model, sweep)
-
 def evaluate_candidate_over_sweep_joint_space(
     candidate: CandidateSpec,
     model: ModelParams,
@@ -520,7 +504,7 @@ def evaluate_candidate_over_sweep_joint_space(
     )
 
 
-def summarize_candidate_output(
+def summarize_candidate_output_joint_space(
     output: CandidateSweepOutput,
     reject_limits: RejectLimits,
     score_weights: ScoreWeights,
@@ -591,7 +575,7 @@ def summarize_candidate_output(
     )
 
 
-def raw_rows_from_output(output: CandidateSweepOutput) -> list[dict[str, float | str | int]]:
+def raw_rows_from_output_joint_space(output: CandidateSweepOutput) -> list[dict[str, float | str | int]]:
     rows = []
     branch_names = list(output.branch_pull.keys())
 
@@ -640,7 +624,7 @@ def raw_rows_from_output(output: CandidateSweepOutput) -> list[dict[str, float |
     return rows
 
 
-def summary_row_from_result(result: CandidateResult) -> dict[str, float | str | bool]:
+def summary_row_from_result_joint_space(result: CandidateResult) -> dict[str, float | str | bool]:
     return {
         "abstraction_name": result.abstraction_name,
         "model_case_name": result.model_case_name,
@@ -665,46 +649,60 @@ def summary_row_from_result(result: CandidateResult) -> dict[str, float | str | 
     }
 
 
+def evaluate_candidate_over_sweep(
+    candidate: CandidateSpec,
+    model: ModelParams,
+    sweep: SweepSpec,
+):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.evaluate_candidate_over_sweep(candidate, model, sweep)
+
+
+def summarize_candidate_output(
+    output,
+    reject_limits: RejectLimits,
+    score_weights: ScoreWeights,
+):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.summarize_candidate_output(output, reject_limits, score_weights)
+
+
+def raw_rows_from_output(output):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.raw_rows_from_output(output)
+
+
+def summary_row_from_result(result):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.summary_row_from_result(result)
+
+
 def write_csv_rows(path: Path, rows: list[dict]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if not rows:
-        return
-    fieldnames = list(rows[0].keys())
-    with path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
+    from simulation_modeling import sweep_runner
+    return sweep_runner.write_csv_rows(path, rows)
 
 
 def append_csv_rows(path: Path, rows: list[dict]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if not rows:
-        return
-    fieldnames = list(rows[0].keys())
-    file_exists = path.exists()
-    with path.open("a", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
-        if not file_exists:
-            writer.writeheader()
-        writer.writerows(rows)
+    from simulation_modeling import sweep_runner
+    return sweep_runner.append_csv_rows(path, rows)
 
 
 def attach_run_label(rows: list[dict], run_label: str) -> list[dict]:
-    return [{"run_label": run_label, **row} for row in rows]
+    from simulation_modeling import sweep_runner
+    return sweep_runner.attach_run_label(rows, run_label)
 
 
 def safe_slug(value: str) -> str:
-    slug = re.sub(r"[^A-Za-z0-9._-]+", "_", value).strip("_")
-    return slug or "unnamed"
+    from simulation_modeling import sweep_runner
+    return sweep_runner.safe_slug(value)
 
 
 def candidate_run_image_dir(
     run_label: str,
     image_root: Path = RESULTS_IMAGE_DIR,
 ) -> Path:
-    image_dir = image_root / safe_slug(run_label)
-    image_dir.mkdir(parents=True, exist_ok=True)
-    return image_dir
+    from simulation_modeling import sweep_runner
+    return sweep_runner.candidate_run_image_dir(run_label, image_root=image_root)
 
 
 def save_plotly_figure_bundle(
@@ -712,81 +710,38 @@ def save_plotly_figure_bundle(
     run_label: str,
     stem: str,
     image_root: Path = RESULTS_IMAGE_DIR,
-) -> tuple[Path, Path | None]:
-    image_dir = candidate_run_image_dir(run_label, image_root=image_root)
-    html_path = image_dir / f"{safe_slug(stem)}.html"
-    png_path = image_dir / f"{safe_slug(stem)}.png"
-
-    fig.write_html(html_path, include_plotlyjs="cdn")
-
-    try:
-        fig.write_image(png_path, scale=2)
-    except Exception:
-        png_path = None
-
-    return html_path, png_path
+):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.save_plotly_figure_bundle(fig, run_label, stem, image_root=image_root)
 
 
 def export_candidate_results(
-    outputs: list[CandidateSweepOutput],
-    results: list[CandidateResult],
+    outputs,
+    results,
     results_dir: Path = RESULTS_DIR,
     run_label: str | None = None,
-) -> tuple[Path, Path, Path, Path]:
-    if run_label is None:
-        run_label = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-    raw_rows = []
-    for output in outputs:
-        raw_rows.extend(raw_rows_from_output(output))
-
-    summary_rows = [summary_row_from_result(result) for result in results]
-    raw_rows_labeled = attach_run_label(raw_rows, run_label)
-    summary_rows_labeled = attach_run_label(summary_rows, run_label)
-
-    raw_path = results_dir / "candidate_sweep_raw.csv"
-    summary_path = results_dir / "candidate_sweep_summary.csv"
-    raw_history_path = results_dir / "candidate_sweep_raw_history.csv"
-    summary_history_path = results_dir / "candidate_sweep_summary_history.csv"
-
-    write_csv_rows(raw_path, raw_rows_labeled)
-    write_csv_rows(summary_path, summary_rows_labeled)
-    append_csv_rows(raw_history_path, raw_rows_labeled)
-    append_csv_rows(summary_history_path, summary_rows_labeled)
-
-    return raw_path, summary_path, raw_history_path, summary_history_path
+):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.export_candidate_results(outputs, results, results_dir=results_dir, run_label=run_label)
 
 
-def sort_candidate_results(results: list[CandidateResult]) -> list[CandidateResult]:
-    return sorted(
-        results,
-        key=lambda result: (
-            result.rejected,
-            float("inf") if result.score is None else result.score,
-            result.peak_tension,
-        ),
-    )
+def sort_candidate_results(results):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.sort_candidate_results(results)
 
 
 def run_experiment(
-    model_cases: list[ModelParams],
-    candidates: list[CandidateSpec],
-    sweep_specs: list[SweepSpec],
+    model_cases,
+    candidates,
+    sweep_specs,
     reject_limits: RejectLimits,
     score_weights: ScoreWeights,
-) -> ExperimentRun:
-    outputs: list[CandidateSweepOutput] = []
-    results: list[CandidateResult] = []
-
-    for model_case in model_cases:
-        for candidate in candidates:
-            for sweep in sweep_specs:
-                output = evaluate_candidate_over_sweep(candidate, model_case, sweep)
-                result = summarize_candidate_output(output, reject_limits, score_weights)
-                outputs.append(output)
-                results.append(result)
-
-    return ExperimentRun(
-        outputs=outputs,
-        results=sort_candidate_results(results),
+):
+    from simulation_modeling import sweep_runner
+    return sweep_runner.run_experiment(
+        model_cases=model_cases,
+        candidates=candidates,
+        sweep_specs=sweep_specs,
+        reject_limits=reject_limits,
+        score_weights=score_weights,
     )

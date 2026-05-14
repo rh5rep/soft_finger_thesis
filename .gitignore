@@ -4,6 +4,7 @@ Thumbs.db
 .vscode/
 .idea/
 .obsidian/
+AGENTS.md
 
 # Python
 __pycache__/
@@ -26,6 +27,16 @@ reports/
 *.zip
 *.csv.bak
 *.pptx
+
+# Spreadsheet/workbook files stay local unless they live under simulation_modeling/
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+!simulation_modeling/**/*.xlsx
+!simulation_modeling/**/*.xls
+!simulation_modeling/**/*.xlsm
+!simulation_modeling/**/*.xlsb
 
 # Generated simulation outputs
 simulation_modeling/results/*history.csv
@@ -53,6 +64,7 @@ docs/portfolio_assets/
 /s242507-gantt.png
 
 # Local-only folders
+/cad/
 /Design/
 /GM Interview/
 /Users/
