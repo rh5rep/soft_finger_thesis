@@ -1,6 +1,6 @@
 from simulation_modeling.candidate_sweep_utils import (
     SharedRoutingGeometry,
-    generate_two_guide_family,
+    generate_guide_family,
 )
 
 
@@ -24,7 +24,7 @@ PALMAR_ENTRY_WITH_SPLITTER = SharedRoutingGeometry(
 
 
 # Baseline single-branch proximal-to-middle two-guide family.
-TWO_GUIDE_PROX_MID_BASELINE = generate_two_guide_family(
+TWO_GUIDE_PROX_MID_BASELINE = generate_guide_family(
     family="two_guide_prox_mid_baseline",
     shared=PALMAR_ENTRY_SHARED,
     guide_bodies=("proximal", "middle"),
@@ -44,7 +44,7 @@ TWO_GUIDE_PROX_MID_BASELINE = generate_two_guide_family(
 
 
 # Slightly more aggressive palmar offsets for larger routing leverage.
-TWO_GUIDE_PROX_MID_HIGH_OFFSET = generate_two_guide_family(
+TWO_GUIDE_PROX_MID_HIGH_OFFSET = generate_guide_family(
     family="two_guide_prox_mid_high_offset",
     shared=PALMAR_ENTRY_SHARED,
     guide_bodies=("proximal", "middle"),
@@ -63,7 +63,7 @@ TWO_GUIDE_PROX_MID_HIGH_OFFSET = generate_two_guide_family(
 
 # Downstream-shifted family to test whether a more distal routing emphasis
 # changes excursion and moment-arm behavior enough to matter.
-TWO_GUIDE_MID_DIST_BASELINE = generate_two_guide_family(
+TWO_GUIDE_MID_DIST_BASELINE = generate_guide_family(
     family="two_guide_mid_dist_baseline",
     shared=PALMAR_ENTRY_SHARED,
     guide_bodies=("middle", "distal"),

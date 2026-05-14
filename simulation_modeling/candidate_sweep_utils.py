@@ -118,6 +118,8 @@ class CandidateResult:
     tau_error_peak: float
     tau_error_rel_rms: float
     tau_error_rel_peak: float
+    tau_ref: float
+    fractional_tau_error_rms: float
     score: float | None
     rejected: bool
     reject_reasons: list[str]
@@ -182,14 +184,25 @@ def make_candidate_name(
     distal_anchor_long: float,
     distal_anchor_offset: float,
     tendon_entry: tuple[float, float],
+    splitter_body: str | None = None,
+    splitter_local: tuple[float, float] | None = None,
 ) -> str:
+    
     body_code = "_".join(b[0] for b in guide_bodies)
     long_code = "_".join(fmt_num(x) for x in guide_longs)
     offset_code = "_".join(fmt_num(x) for x in guide_offsets)
     entry_x, entry_y = tendon_entry
+    splitter_code = ""
+    if splitter_body is not None:
+        splitter_x, splitter_y = splitter_local
+        splitter_code = (f"_sb{splitter_body}"
+                         f"_sx{fmt_num(splitter_x)}"
+                         f"_sy{fmt_num(splitter_y)}"
+        )
 
     return (
         f"{family}"
+        f"{splitter_code}"
         f"_b-{body_code}"
         f"_l-{long_code}"
         f"_o-{offset_code}"
@@ -353,15 +366,18 @@ def make_tendon_input(candidate: CandidateSpec, model: ModelParams) -> v01_model
     )
 
 
-def generate_two_guide_family(
+    
+
+def generate_guide_family(
         family: str,
         shared: SharedRoutingGeometry,
-        guide_bodies: tuple[str, str],
-        guide_long_sets: tuple[tuple[float, float], ...],
-        guide_offset_sets: tuple[tuple[float, float], ...],
+        guide_bodies: tuple[str, ...],
+        guide_long_sets: tuple[tuple[float, ...], ...],
+        guide_offset_sets: tuple[tuple[float, ...], ...],
         distal_anchor_longs: tuple[float, ...],
         distal_anchor_offsets: tuple[float, ...],
 ) -> list[CandidateSpec]:
+    """Generate candidate specs for any number of guide bodies."""
     
     candidates = []
 
@@ -425,6 +441,19 @@ def branch_peak_pull(branch_pull: dict[str, np.ndarray]) -> float:
 
 
 def evaluate_candidate_over_sweep(
+   candidate: CandidateSpec,
+    model: ModelParams,
+    sweep: SweepSpec,
+) -> CandidateSweepOutput:
+    
+    if model.abstraction_name == "straight_finger":
+        from simulation_modeling import straight_finger_sweep
+        return straight_finger_sweep.evaluate_candidate_over_sweep_straight_finger(candidate, model, sweep)
+    
+    elif model.abstraction_name == "joint_space":
+        return evaluate_candidate_over_sweep_joint_space(candidate, model, sweep)
+
+def evaluate_candidate_over_sweep_joint_space(
     candidate: CandidateSpec,
     model: ModelParams,
     sweep: SweepSpec,
@@ -508,6 +537,10 @@ def summarize_candidate_output(
     tau_error_peak = float(np.max(tau_error_norm))
     tau_error_rel_rms = float(np.sqrt(np.mean(tau_error_rel_norm**2)))
     tau_error_rel_peak = float(np.max(tau_error_rel_norm))
+    
+    tau_req_norm = vector_norm_rows(output.tau_req)
+    tau_ref = max(max(tau_req_norm), 1e-9)
+    fractional_tau_error_rms = tau_error_rms / tau_ref
 
     reject_reasons: list[str] = []
     if peak_tension > reject_limits.max_tension:
@@ -528,7 +561,7 @@ def summarize_candidate_output(
     if not rejected:
         score = (
             score_weights.w_tension * (peak_tension / max(reject_limits.max_tension, 1e-9))
-            + score_weights.w_tau_error * tau_error_rel_rms
+            + score_weights.w_tau_error * fractional_tau_error_rms
             + score_weights.w_pull * (peak_pull / max(reject_limits.max_pull, 1e-9))
             + score_weights.w_balance * (peak_branch_imbalance / max(reject_limits.max_branch_imbalance, 1e-9))
             + score_weights.w_smoothness * smoothness_penalty
@@ -550,6 +583,8 @@ def summarize_candidate_output(
         tau_error_peak=tau_error_peak,
         tau_error_rel_rms=tau_error_rel_rms,
         tau_error_rel_peak=tau_error_rel_peak,
+        tau_ref=tau_ref,
+        fractional_tau_error_rms=fractional_tau_error_rms,
         score=score,
         rejected=rejected,
         reject_reasons=reject_reasons,
@@ -622,6 +657,8 @@ def summary_row_from_result(result: CandidateResult) -> dict[str, float | str | 
         "tau_error_peak": result.tau_error_peak,
         "tau_error_rel_rms": result.tau_error_rel_rms,
         "tau_error_rel_peak": result.tau_error_rel_peak,
+        "tau_ref": result.tau_ref,
+        "fractional_tau_error_rms": result.fractional_tau_error_rms,
         "score": result.score,
         "rejected": result.rejected,
         "reject_reasons": "|".join(result.reject_reasons),
