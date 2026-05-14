@@ -11,6 +11,19 @@ RESULTS_DIR = Path(__file__).resolve().parent / "results"
 RESULTS_IMAGE_DIR = RESULTS_DIR / "candidate_run_images"
 
 
+def _fieldnames_from_rows(rows: list[dict]) -> list[str]:
+    fieldnames: list[str] = []
+    seen: set[str] = set()
+
+    for row in rows:
+        for key in row.keys():
+            if key not in seen:
+                seen.add(key)
+                fieldnames.append(key)
+
+    return fieldnames
+
+
 def _sweep_specs_for_model(
     model,
     sweep_specs,
@@ -108,7 +121,7 @@ def write_csv_rows(path: Path, rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
         return
-    fieldnames = list(rows[0].keys())
+    fieldnames = _fieldnames_from_rows(rows)
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
@@ -119,13 +132,26 @@ def append_csv_rows(path: Path, rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
         return
-    fieldnames = list(rows[0].keys())
-    file_exists = path.exists()
-    with path.open("a", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
-        if not file_exists:
+
+    if not path.exists():
+        fieldnames = _fieldnames_from_rows(rows)
+        with path.open("w", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fieldnames)
             writer.writeheader()
-        writer.writerows(rows)
+            writer.writerows(rows)
+        return
+
+    with path.open("r", newline="") as handle:
+        reader = csv.DictReader(handle)
+        existing_rows = list(reader)
+
+    combined_rows = existing_rows + rows
+    fieldnames = _fieldnames_from_rows(combined_rows)
+
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(combined_rows)
 
 
 def attach_run_label(rows: list[dict], run_label: str) -> list[dict]:

@@ -22,6 +22,11 @@ env/
 # Generated reports and caches
 reports/
 
+# Thesis writing / reference material lives locally, not in git
+/docs/
+/notes/
+/refs/
+
 # Binary exports handled outside git
 *.pdf
 *.zip
@@ -39,6 +44,8 @@ reports/
 !simulation_modeling/**/*.xlsb
 
 # Generated simulation outputs
+simulation_modeling/results/*
+!simulation_modeling/results/.gitkeep
 simulation_modeling/results/*history.csv
 simulation_modeling/results/.DS_Store
 simulation_modeling/results/candidate_run_images/.DS_Store
@@ -67,5 +74,6 @@ docs/portfolio_assets/
 /cad/
 /Design/
 /GM Interview/
+/Skylab Startup Programme/
 /Users/
 /Example Project Plans/
